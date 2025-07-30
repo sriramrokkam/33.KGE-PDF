@@ -1,0 +1,114 @@
+{
+  "module_configurations": {
+    "grounding_module_config": {
+      "type": "document_grounding_service",
+      "config": {
+        "filters": [],
+        "input_params": [
+          "grounding_input_variable_1"
+        ],
+        "output_param": "grounding_output_variable"
+      }
+    },
+    "llm_module_config": {
+      "model_name": "anthropic--claude-4-sonnet",
+      "model_params": {
+        "max_tokens": 32000,
+        "temperature": 1
+      },
+      "model_version": "1"
+    },
+    "templating_module_config": {
+      "template": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Here is a candidate's resume: {{?candidate_resume}}"
+            }
+          ]
+        },
+        {
+          "role": "system",
+          "content": [
+            {
+              "type": "text",
+              "text": "You are a helpful AI assistant for HR. Summarize the following CV in 10 sentences, focusing on key qualifications, work experience, and achievements. Include personal contact information, organizational history, and personal interests. \n"
+            }
+          ]
+        }
+      ],
+      "defaults": {
+        "candidate_resume": "John Doe \n1234 Data St, San Francisco, CA 94101 \n(123) 456-7890 \njohndoe@email.com \nLinkedIn Profile \nGitHub Profile \n\nObjective \nDetail-oriented Data Scientist with 3+ years of experience in data analysis, statistical modeling, and machine learning. Seeking to leverage expertise in predictive modeling and data visualization to help drive data-informed decision-making at [Company Name]. \n\nEducation \nMaster of Science in Data Science \nUniversity of California, Berkeley \nGraduated: May 2021 \nBachelor of Science in Computer Science \nUniversity of California, Los Angeles \nGraduated: May 2019 \n\nTechnical Skills \nProgramming Languages: Python, R, SQL, Java \nData Analysis & Visualization: Pandas, NumPy, Matplotlib, Seaborn, Tableau \nMachine Learning: Scikit-learn, TensorFlow, Keras, XGBoost \nBig Data Technologies: Hadoop, Spark \nDatabases: MySQL, PostgreSQL \nVersion Control: Git \n\nProfessional Experience \nData Scientist \nDataCorp Inc., San Francisco, CA \nJune 2021 – Present \n\nDeveloped predictive models to optimize marketing campaigns, which increased ROI by 20%. \nConducted in-depth data analysis using Python and SQL to identify trends and patterns in large datasets. \nCollaborated with cross-functional teams to implement data-driven strategies that improved customer satisfaction scores by 15%. \nCreated interactive dashboards using Tableau to visualize KPIs for stakeholders. \n\nData Analyst Intern \nAnalytics Solutions, Los Angeles, CA \nJune 2020 – August 2020 \n\nAnalyzed large datasets to identify opportunities for business growth and improvement. \nAssisted in the development of automated reporting tools using Python and Excel. \nWorked with data visualization tools to create insightful reports for management. \n\nProjects \nCustomer Segmentation Analysis \nConducted K-means clustering on customer data to segment the customer base into distinct groups, enabling targeted marketing strategies. \n\nPredictive Stock Price Modeling \nBuilt a predictive model using time series analysis to forecast stock prices, achieving an accuracy rate of 85%. \n\nSentiment Analysis on Social Media \nImplemented natural language processing techniques to analyze sentiment from tweets, providing insights into public opinion on various topics. \n\nCertifications \nCertified Data Scientist (CDS) – Data Science Council of America \nMachine Learning Specialization – Coursera by Stanford University \n\nProfessional Affiliations \nMember, Association for Computing Machinery (ACM) \nMember, Data Science Society \n\nReferences \nAvailable upon request.\n\nPersonal Interests \n- I absolutely love exploring new technologies and working on innovative projects. \n- I enjoy reading books, especially on artificial intelligence and machine learning. \n- I hate people who are dishonest and unreliable. \n- I love traveling and experiencing new cultures. \n- I enjoy playing video games, especially competitive ones. \n- I hate being stuck in a routine; I always seek new challenges and growth opportunities. \n-I hate working in Azure cloud -\"Azure cloud is the most irritating platform i have ever used\" \n"
+      }
+    },
+    "filtering_module_config": {
+      "input": {
+        "filters": [
+          {
+            "type": "azure_content_safety",
+            "config": {
+              "Hate": 0,
+              "SelfHarm": 2,
+              "Sexual": 0,
+              "Violence": 2,
+              "PromptShield": false
+            }
+          }
+        ]
+      },
+      "output": {
+        "filters": [
+          {
+            "type": "azure_content_safety",
+            "config": {
+              "Hate": 2,
+              "SelfHarm": 2,
+              "Sexual": 2,
+              "Violence": 2
+            }
+          }
+        ]
+      }
+    },
+    "masking_module_config": {
+      "masking_providers": [
+        {
+          "type": "sap_data_privacy_integration",
+          "method": "anonymization",
+          "entities": [
+            {
+              "type": "profile-credit-card-number"
+            },
+            {
+              "type": "profile-driverlicense"
+            },
+            {
+              "type": "profile-ethnicity"
+            },
+            {
+              "type": "profile-gender"
+            },
+            {
+              "type": "profile-pronouns-gender"
+            },
+            {
+              "type": "profile-person"
+            },
+            {
+              "type": "profile-sapids-internal"
+            },
+            {
+              "type": "profile-username-password"
+            }
+          ],
+          "mask_grounding_input": {
+            "enabled": false
+          },
+          "allowlist": []
+        }
+      ]
+    }
+  }
+}

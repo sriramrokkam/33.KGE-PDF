@@ -1,0 +1,17 @@
+python-dotenv
+generative-ai-hub-sdk[langchain]
+langchain-openai
+langchain
+langchain-community
+networkx
+matplotlib
+hdbcli
+numpy
+ipython
+flask
+flask-cors
+werkzeug
+uuid
+pypdf
+pillow
+requests

@@ -1,0 +1,5 @@
+hdbcli>=2.15.0
+tabulate>=0.9.0
+colorama>=0.4.6
+python-dotenv>=1.0.0
+gen-ai-hub>=1.0.0

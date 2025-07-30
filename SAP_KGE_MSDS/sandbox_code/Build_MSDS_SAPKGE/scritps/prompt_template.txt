@@ -1,0 +1,127 @@
+# Read the SDS ontology schema
+def read_ontology_schema(file_path="OWL_Prompt_TTL.txt"):
+    """Read the SDS ontology schema from file"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            return file.read()
+    except FileNotFoundError:
+        return "# SDS Ontology schema file not found - please provide the ontology structure"
+
+# Read the ontology schema
+sds_ontology = read_ontology_schema()
+
+# Improved prompt structure
+prompt = {
+    "messages": [
+        {
+            "role": "system",
+            "content": '''You are an expert chemical safety data analyst specialized in extracting structured information from Material Safety Data Sheets (MSDS) and converting it to RDF triples.
+
+Your primary task is to:
+1. Carefully analyze the provided MSDS document
+2. Extract all relevant safety, chemical, and regulatory information
+3. Structure the extracted information according to the provided SDS ontology schema
+4. Output well-formed RDF triples using the `sds:` namespace prefix
+
+Guidelines for extraction:
+- Be comprehensive - capture all available information from the MSDS
+- Use appropriate data types (strings, numbers, dates, URIs)
+- Create meaningful URIs for chemical substances and entities
+- Include all hazard classifications, physical properties, and safety measures
+- Maintain relationships between related entities (e.g., chemical-to-hazard mappings)
+- Use proper RDF syntax with prefixes and turtle notation
+
+Output format: Provide the results as valid Turtle RDF syntax with clear namespace declarations.'''
+        },
+        {
+            "role": "user", 
+            "content": f"""Please extract structured information from the following MSDS document and convert it to RDF triples using the provided SDS ontology schema.
+
+**SDS ONTOLOGY SCHEMA:**
+```turtle
+{sds_ontology}
+```
+
+**MSDS DOCUMENT TO ANALYZE:**
+```
+{pdf_text}
+```
+
+Please provide comprehensive RDF triples that capture all the chemical safety information from this MSDS document according to the ontology schema provided above. Include proper namespace declarations and use meaningful URIs for all entities."""
+        }
+    ],
+    "max_tokens": 20000
+}
+
+# Alternative more structured approach with explicit sections
+prompt_detailed = {
+    "messages": [
+        {
+            "role": "system",
+            "content": '''You are an expert in chemical safety data analysis and knowledge graph construction. You specialize in converting Material Safety Data Sheets (MSDS) into structured RDF triples.
+
+Your expertise includes:
+- Chemical identification and classification
+- Hazard assessment and pictogram interpretation  
+- Physical and chemical property extraction
+- Safety measure and handling procedure structuring
+- Regulatory compliance mapping
+- RDF/OWL ontology application
+
+Task Requirements:
+1. Extract ALL information sections from the MSDS
+2. Map data to the provided SDS ontology classes and properties
+3. Generate valid RDF triples in Turtle syntax
+4. Create meaningful URIs and maintain entity relationships
+5. Include proper data typing and language tags where appropriate'''
+        },
+        {
+            "role": "user",
+            "content": f"""I need you to analyze this MSDS document and extract structured information as RDF triples.
+
+**REFERENCE SDS ONTOLOGY:**
+The following ontology defines the classes and properties you should use:
+
+```turtle
+{sds_ontology}
+```
+
+**MSDS DOCUMENT FOR ANALYSIS:**
+
+```
+{pdf_text}
+```
+
+**EXTRACTION REQUIREMENTS:**
+
+Please extract information from all relevant MSDS sections including:
+- Section 1: Chemical identification (product name, manufacturer, CAS numbers, synonyms)
+- Section 2: Hazard identification (GHS classifications, pictograms, signal words)
+- Section 3: Composition/ingredients (chemical components, concentrations)
+- Section 4: First aid measures
+- Section 5: Fire-fighting measures  
+- Section 6: Accidental release measures
+- Section 7: Handling and storage
+- Section 8: Exposure controls/personal protection
+- Section 9: Physical and chemical properties
+- Section 10: Stability and reactivity
+- Section 11: Toxicological information
+- Section 12: Ecological information
+- Section 13: Disposal considerations
+- Section 14: Transport information
+- Section 15: Regulatory information
+- Section 16: Other information
+
+**OUTPUT FORMAT:**
+Provide complete RDF triples in Turtle syntax with:
+- Proper namespace declarations
+- Meaningful URIs for all entities
+- Appropriate data types and literals
+- Complete coverage of available MSDS data
+- Adherence to the provided SDS ontology structure
+
+Begin your response with the namespace declarations and RDF triples."""
+        }
+    ],
+    "max_tokens": 25000  # Increased for comprehensive output
+}

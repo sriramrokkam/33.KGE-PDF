@@ -1,0 +1,983 @@
+@prefix msds: <http://example.org/msds#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.com/sds_ontology#AccidentalReleaseMeasures> a rdfs:Class ;
+    rdfs:label "Accidental Release Measures" ;
+    rdfs:comment "Procedures for containing and cleaning up spills and releases." .
+
+<http://example.com/sds_ontology#CompositionInformationOnIngredients> a rdfs:Class ;
+    rdfs:label "Composition/Information on Ingredients" ;
+    rdfs:comment "Details about the chemical composition of the product." .
+
+<http://example.com/sds_ontology#DisposalConsiderations> a rdfs:Class ;
+    rdfs:label "Disposal Considerations" ;
+    rdfs:comment "Guidelines for proper disposal of the product and its containers." .
+
+<http://example.com/sds_ontology#EcologicalInformation> a rdfs:Class ;
+    rdfs:label "Ecological Information" ;
+    rdfs:comment "Information regarding the environmental impact of the product." .
+
+<http://example.com/sds_ontology#ExposureControlsPersonalProtection> a rdfs:Class ;
+    rdfs:label "Exposure Controls/Personal Protection" ;
+    rdfs:comment "Information on controlling exposure and recommended personal protective equipment." .
+
+<http://example.com/sds_ontology#ExposureLimit> a rdfs:Class ;
+    rdfs:label "Exposure Limit" ;
+    rdfs:comment "Occupational exposure limits for a chemical." .
+
+<http://example.com/sds_ontology#FireFightingMeasures> a rdfs:Class ;
+    rdfs:label "Fire Fighting Measures" ;
+    rdfs:comment "Information on how to handle fires involving the product." .
+
+<http://example.com/sds_ontology#FirstAidMeasures> a rdfs:Class ;
+    rdfs:label "First Aid Measures" ;
+    rdfs:comment "Guidelines for immediate medical attention and treatment." .
+
+<http://example.com/sds_ontology#HandlingAndStorage> a rdfs:Class ;
+    rdfs:label "Handling and Storage" ;
+    rdfs:comment "Guidelines for safe handling and storage of the product." .
+
+<http://example.com/sds_ontology#HazardsIdentification> a rdfs:Class ;
+    rdfs:label "Hazards Identification" ;
+    rdfs:comment "Information about the hazards associated with the product." .
+
+<http://example.com/sds_ontology#Identification> a rdfs:Class ;
+    rdfs:label "Identification" ;
+    rdfs:comment "Information related to product identification and manufacturer details." .
+
+<http://example.com/sds_ontology#Ingredient> a rdfs:Class ;
+    rdfs:label "Ingredient" ;
+    rdfs:comment "A chemical component of the product." .
+
+<http://example.com/sds_ontology#Manufacturer> a rdfs:Class ;
+    rdfs:label "Manufacturer" ;
+    rdfs:comment "Details of the product manufacturer." .
+
+<http://example.com/sds_ontology#OtherInformation> a rdfs:Class ;
+    rdfs:label "Other Information" ;
+    rdfs:comment "Miscellaneous information including revision history and ratings." .
+
+<http://example.com/sds_ontology#PhysicalAndChemicalProperties> a rdfs:Class ;
+    rdfs:label "Physical and Chemical Properties" ;
+    rdfs:comment "Characteristics of the product's physical and chemical nature." .
+
+<http://example.com/sds_ontology#Property> a rdfs:Class ;
+    rdfs:label "Property" ;
+    rdfs:comment "A specific physical or chemical property." .
+
+<http://example.com/sds_ontology#RegulatoryInformation> a rdfs:Class ;
+    rdfs:label "Regulatory Information" ;
+    rdfs:comment "Compliance with national and international regulations." .
+
+<http://example.com/sds_ontology#SafetyDataSheet> a rdfs:Class ;
+    rdfs:label "Safety Data Sheet" ;
+    rdfs:comment "Represents a complete Safety Data Sheet." .
+
+<http://example.com/sds_ontology#StabilityAndReactivity> a rdfs:Class ;
+    rdfs:label "Stability and Reactivity" ;
+    rdfs:comment "Information regarding the product's stability and potential hazardous reactions." .
+
+<http://example.com/sds_ontology#ToxicologicalInformation> a rdfs:Class ;
+    rdfs:label "Toxicological Information" ;
+    rdfs:comment "Details on the potential health effects of the product." .
+
+<http://example.com/sds_ontology#TransportationInformation> a rdfs:Class ;
+    rdfs:label "Transportation Information" ;
+    rdfs:comment "Regulations and guidelines for transporting the product." .
+
+<http://example.com/sds_ontology#acuteToxicityEstimates> a rdf:Property ;
+    rdfs:label "acute toxicity estimates" ;
+    rdfs:comment "Numerical measures of acute toxicity." ;
+    rdfs:domain <http://example.com/sds_ontology#ToxicologicalInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#aerosolAirTransportNote> a rdf:Property ;
+    rdfs:label "aerosol air transport note" ;
+    rdfs:comment "Note regarding aerosol transport by air." ;
+    rdfs:domain <http://example.com/sds_ontology#TransportationInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#bioaccumulativePotential> a rdf:Property ;
+    rdfs:label "bioaccumulative potential" ;
+    rdfs:comment "Information on bioaccumulative potential." ;
+    rdfs:domain <http://example.com/sds_ontology#EcologicalInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#californiaProp65Warning> a rdf:Property ;
+    rdfs:label "California Proposition 65 warning" ;
+    rdfs:comment "California Safe Drinking Water and Toxic Enforcement Act (Proposition 65) warning." ;
+    rdfs:domain <http://example.com/sds_ontology#RegulatoryInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#canadianEnvironmentalProtectionAct> a rdf:Property ;
+    rdfs:label "Canadian Environmental Protection Act" ;
+    rdfs:comment "Canadian Environmental Protection Act compliance." ;
+    rdfs:domain <http://example.com/sds_ontology#RegulatoryInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#carcinogenStatus> a rdf:Property ;
+    rdfs:label "carcinogen status" ;
+    rdfs:comment "Information on carcinogen status." ;
+    rdfs:domain <http://example.com/sds_ontology#ToxicologicalInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#casNumber> a rdf:Property ;
+    rdfs:label "CAS number" ;
+    rdfs:comment "The Chemical Abstracts Service (CAS) number of the ingredient." ;
+    rdfs:domain <http://example.com/sds_ontology#Ingredient> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#cerclaReportableQuantity> a rdf:Property ;
+    rdfs:label "CERCLA 103 reportable quantity" ;
+    rdfs:comment "CERCLA 103 reportable quantity information." ;
+    rdfs:domain <http://example.com/sds_ontology#RegulatoryInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#chemicalName> a rdf:Property ;
+    rdfs:label "chemical name" ;
+    rdfs:comment "The name of the chemical for which the exposure limit applies." ;
+    rdfs:domain <http://example.com/sds_ontology#ExposureLimit> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#chemicalSpillsTelephone> a rdf:Property ;
+    rdfs:label "chemical spills telephone" ;
+    rdfs:comment "Chemical spills emergency telephone number (Chemtrec)." ;
+    rdfs:domain <http://example.com/sds_ontology#Manufacturer> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#chemicalStability> a rdf:Property ;
+    rdfs:label "chemical stability" ;
+    rdfs:comment "Information on the product's chemical stability." ;
+    rdfs:domain <http://example.com/sds_ontology#StabilityAndReactivity> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#chronicEffects> a rdf:Property ;
+    rdfs:label "chronic effects" ;
+    rdfs:comment "Chronic health effects." ;
+    rdfs:domain <http://example.com/sds_ontology#ToxicologicalInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#conditionsForSafeStorage> a rdf:Property ;
+    rdfs:label "conditions for safe storage" ;
+    rdfs:comment "Conditions for safe storage of the product." ;
+    rdfs:domain <http://example.com/sds_ontology#HandlingAndStorage> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#conditionsToAvoid> a rdf:Property ;
+    rdfs:label "conditions to avoid" ;
+    rdfs:comment "Conditions that should be avoided." ;
+    rdfs:domain <http://example.com/sds_ontology#StabilityAndReactivity> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#containmentAndCleanupMethods> a rdf:Property ;
+    rdfs:label "methods and materials for containment/cleanup" ;
+    rdfs:comment "Methods and materials for containment and cleanup of spills." ;
+    rdfs:domain <http://example.com/sds_ontology#AccidentalReleaseMeasures> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#disposalCriteria> a rdf:Property ;
+    rdfs:label "disposal criteria" ;
+    rdfs:comment "Criteria for hazardous waste classification and disposal." ;
+    rdfs:domain <http://example.com/sds_ontology#DisposalConsiderations> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#dotSurfaceShippingDescription> a rdf:Property ;
+    rdfs:label "DOT surface shipping description" ;
+    rdfs:comment "DOT surface shipping description." ;
+    rdfs:domain <http://example.com/sds_ontology#TransportationInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#ecotoxicity> a rdf:Property ;
+    rdfs:label "ecotoxicity" ;
+    rdfs:comment "Information on ecotoxicity." ;
+    rdfs:domain <http://example.com/sds_ontology#EcologicalInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#emergencyTelephone> a rdf:Property ;
+    rdfs:label "emergency telephone" ;
+    rdfs:comment "Emergency contact telephone number." ;
+    rdfs:domain <http://example.com/sds_ontology#Manufacturer> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#engineeringControlsConsumerUse> a rdf:Property ;
+    rdfs:label "appropriate engineering controls for normal consumer use" ;
+    rdfs:comment "Appropriate engineering controls for normal consumer use." ;
+    rdfs:domain <http://example.com/sds_ontology#ExposureControlsPersonalProtection> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#engineeringControlsWorkplaceUse> a rdf:Property ;
+    rdfs:label "appropriate engineering controls for workplace use" ;
+    rdfs:comment "Appropriate engineering controls for bulk processing or workplace use." ;
+    rdfs:domain <http://example.com/sds_ontology#ExposureControlsPersonalProtection> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#epaTscaStatus> a rdf:Property ;
+    rdfs:label "EPA Toxic Substances Control Act (TSCA) status" ;
+    rdfs:comment "EPA Toxic Substances Control Act (TSCA) status." ;
+    rdfs:domain <http://example.com/sds_ontology#RegulatoryInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#extinguishingMedia> a rdf:Property ;
+    rdfs:label "extinguishing media" ;
+    rdfs:comment "Suitable and unsuitable extinguishing media." ;
+    rdfs:domain <http://example.com/sds_ontology#FireFightingMeasures> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#eyeContactFirstAid> a rdf:Property ;
+    rdfs:label "eye contact first aid" ;
+    rdfs:comment "First aid measures for eye contact." ;
+    rdfs:domain <http://example.com/sds_ontology#FirstAidMeasures> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#eyeContactSymptomsOfOverexposure> a rdf:Property ;
+    rdfs:label "eye contact symptoms of overexposure" ;
+    rdfs:comment "Symptoms of overexposure by eye contact." ;
+    rdfs:domain <http://example.com/sds_ontology#ToxicologicalInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#eyeProtectionConsumerUse> a rdf:Property ;
+    rdfs:label "eye protection for normal consumer use" ;
+    rdfs:comment "Eye protection recommendations for normal consumer use." ;
+    rdfs:domain <http://example.com/sds_ontology#ExposureControlsPersonalProtection> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#eyeProtectionWorkplaceUse> a rdf:Property ;
+    rdfs:label "eye protection for workplace use" ;
+    rdfs:comment "Eye protection recommendations for bulk processing or workplace use." ;
+    rdfs:domain <http://example.com/sds_ontology#ExposureControlsPersonalProtection> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#hasAccidentalReleaseMeasures> a rdf:Property ;
+    rdfs:label "has accidental release measures" ;
+    rdfs:comment "Links an SDS to its accidental release measures section." ;
+    rdfs:domain <http://example.com/sds_ontology#SafetyDataSheet> ;
+    rdfs:range <http://example.com/sds_ontology#AccidentalReleaseMeasures> .
+
+<http://example.com/sds_ontology#hasCompositionInformationOnIngredients> a rdf:Property ;
+    rdfs:label "has composition information on ingredients" ;
+    rdfs:comment "Links an SDS to its composition information on ingredients section." ;
+    rdfs:domain <http://example.com/sds_ontology#SafetyDataSheet> ;
+    rdfs:range <http://example.com/sds_ontology#CompositionInformationOnIngredients> .
+
+<http://example.com/sds_ontology#hasDisposalConsiderations> a rdf:Property ;
+    rdfs:label "has disposal considerations" ;
+    rdfs:comment "Links an SDS to its disposal considerations section." ;
+    rdfs:domain <http://example.com/sds_ontology#SafetyDataSheet> ;
+    rdfs:range <http://example.com/sds_ontology#DisposalConsiderations> .
+
+<http://example.com/sds_ontology#hasEcologicalInformation> a rdf:Property ;
+    rdfs:label "has ecological information" ;
+    rdfs:comment "Links an SDS to its ecological information section." ;
+    rdfs:domain <http://example.com/sds_ontology#SafetyDataSheet> ;
+    rdfs:range <http://example.com/sds_ontology#EcologicalInformation> .
+
+<http://example.com/sds_ontology#hasExposureControlsPersonalProtection> a rdf:Property ;
+    rdfs:label "has exposure controls personal protection" ;
+    rdfs:comment "Links an SDS to its exposure controls/personal protection section." ;
+    rdfs:domain <http://example.com/sds_ontology#SafetyDataSheet> ;
+    rdfs:range <http://example.com/sds_ontology#ExposureControlsPersonalProtection> .
+
+<http://example.com/sds_ontology#hasExposureLimit> a rdf:Property ;
+    rdfs:label "has exposure limit" ;
+    rdfs:comment "Links the exposure controls section to an occupational exposure limit." ;
+    rdfs:domain <http://example.com/sds_ontology#ExposureControlsPersonalProtection> ;
+    rdfs:range <http://example.com/sds_ontology#ExposureLimit> .
+
+<http://example.com/sds_ontology#hasFireFightingMeasures> a rdf:Property ;
+    rdfs:label "has fire fighting measures" ;
+    rdfs:comment "Links an SDS to its fire fighting measures section." ;
+    rdfs:domain <http://example.com/sds_ontology#SafetyDataSheet> ;
+    rdfs:range <http://example.com/sds_ontology#FireFightingMeasures> .
+
+<http://example.com/sds_ontology#hasFirstAidMeasures> a rdf:Property ;
+    rdfs:label "has first aid measures" ;
+    rdfs:comment "Links an SDS to its first aid measures section." ;
+    rdfs:domain <http://example.com/sds_ontology#SafetyDataSheet> ;
+    rdfs:range <http://example.com/sds_ontology#FirstAidMeasures> .
+
+<http://example.com/sds_ontology#hasHandlingAndStorage> a rdf:Property ;
+    rdfs:label "has handling and storage" ;
+    rdfs:comment "Links an SDS to its handling and storage section." ;
+    rdfs:domain <http://example.com/sds_ontology#SafetyDataSheet> ;
+    rdfs:range <http://example.com/sds_ontology#HandlingAndStorage> .
+
+<http://example.com/sds_ontology#hasHazardsIdentification> a rdf:Property ;
+    rdfs:label "has hazards identification" ;
+    rdfs:comment "Links an SDS to its hazards identification section." ;
+    rdfs:domain <http://example.com/sds_ontology#SafetyDataSheet> ;
+    rdfs:range <http://example.com/sds_ontology#HazardsIdentification> .
+
+<http://example.com/sds_ontology#hasIdentification> a rdf:Property ;
+    rdfs:label "has identification" ;
+    rdfs:comment "Links an SDS to its identification section." ;
+    rdfs:domain <http://example.com/sds_ontology#SafetyDataSheet> ;
+    rdfs:range <http://example.com/sds_ontology#Identification> .
+
+<http://example.com/sds_ontology#hasIngredient> a rdf:Property ;
+    rdfs:label "has ingredient" ;
+    rdfs:comment "Links the composition section to a specific ingredient." ;
+    rdfs:domain <http://example.com/sds_ontology#CompositionInformationOnIngredients> ;
+    rdfs:range <http://example.com/sds_ontology#Ingredient> .
+
+<http://example.com/sds_ontology#hasManufacturer> a rdf:Property ;
+    rdfs:label "has manufacturer" ;
+    rdfs:comment "Links the identification section to the manufacturer details." ;
+    rdfs:domain <http://example.com/sds_ontology#Identification> ;
+    rdfs:range <http://example.com/sds_ontology#Manufacturer> .
+
+<http://example.com/sds_ontology#hasOtherInformation> a rdf:Property ;
+    rdfs:label "has other information" ;
+    rdfs:comment "Links an SDS to its other information section." ;
+    rdfs:domain <http://example.com/sds_ontology#SafetyDataSheet> ;
+    rdfs:range <http://example.com/sds_ontology#OtherInformation> .
+
+<http://example.com/sds_ontology#hasPhysicalAndChemicalProperties> a rdf:Property ;
+    rdfs:label "has physical and chemical properties" ;
+    rdfs:comment "Links an SDS to its physical and chemical properties section." ;
+    rdfs:domain <http://example.com/sds_ontology#SafetyDataSheet> ;
+    rdfs:range <http://example.com/sds_ontology#PhysicalAndChemicalProperties> .
+
+<http://example.com/sds_ontology#hasPhysicalChemicalProperty> a rdf:Property ;
+    rdfs:label "has physical chemical property" ;
+    rdfs:comment "Links the physical and chemical properties section to a specific property." ;
+    rdfs:domain <http://example.com/sds_ontology#PhysicalAndChemicalProperties> ;
+    rdfs:range <http://example.com/sds_ontology#Property> .
+
+<http://example.com/sds_ontology#hasRegulatoryInformation> a rdf:Property ;
+    rdfs:label "has regulatory information" ;
+    rdfs:comment "Links an SDS to its regulatory information section." ;
+    rdfs:domain <http://example.com/sds_ontology#SafetyDataSheet> ;
+    rdfs:range <http://example.com/sds_ontology#RegulatoryInformation> .
+
+<http://example.com/sds_ontology#hasStabilityAndReactivity> a rdf:Property ;
+    rdfs:label "has stability and reactivity" ;
+    rdfs:comment "Links an SDS to its stability and reactivity section." ;
+    rdfs:domain <http://example.com/sds_ontology#SafetyDataSheet> ;
+    rdfs:range <http://example.com/sds_ontology#StabilityAndReactivity> .
+
+<http://example.com/sds_ontology#hasToxicologicalInformation> a rdf:Property ;
+    rdfs:label "has toxicological information" ;
+    rdfs:comment "Links an SDS to its toxicological information section." ;
+    rdfs:domain <http://example.com/sds_ontology#SafetyDataSheet> ;
+    rdfs:range <http://example.com/sds_ontology#ToxicologicalInformation> .
+
+<http://example.com/sds_ontology#hasTransportationInformation> a rdf:Property ;
+    rdfs:label "has transportation information" ;
+    rdfs:comment "Links an SDS to its transportation information section." ;
+    rdfs:domain <http://example.com/sds_ontology#SafetyDataSheet> ;
+    rdfs:range <http://example.com/sds_ontology#TransportationInformation> .
+
+<http://example.com/sds_ontology#hazardousDecompositionProducts> a rdf:Property ;
+    rdfs:label "hazardous decomposition products" ;
+    rdfs:comment "Hazardous decomposition products." ;
+    rdfs:domain <http://example.com/sds_ontology#StabilityAndReactivity> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#hcsGhsClassification> a rdf:Property ;
+    rdfs:label "HCS 2024 / GHS Classification" ;
+    rdfs:comment "The HCS 2024 / GHS classification of the product." ;
+    rdfs:domain <http://example.com/sds_ontology#HazardsIdentification> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#hmisFireHazardRating> a rdf:Property ;
+    rdfs:label "HMIS fire hazard rating" ;
+    rdfs:comment "HMIS Fire Hazard Rating." ;
+    rdfs:domain <http://example.com/sds_ontology#OtherInformation> ;
+    rdfs:range xsd:integer .
+
+<http://example.com/sds_ontology#hmisHealthRating> a rdf:Property ;
+    rdfs:label "HMIS health rating" ;
+    rdfs:comment "HMIS Health Hazard Rating." ;
+    rdfs:domain <http://example.com/sds_ontology#OtherInformation> ;
+    rdfs:range xsd:integer .
+
+<http://example.com/sds_ontology#hmisPhysicalHazardRating> a rdf:Property ;
+    rdfs:label "HMIS physical hazard rating" ;
+    rdfs:comment "HMIS Physical Hazard Rating." ;
+    rdfs:domain <http://example.com/sds_ontology#OtherInformation> ;
+    rdfs:range xsd:integer .
+
+<http://example.com/sds_ontology#icaoShippingDescription> a rdf:Property ;
+    rdfs:label "ICAO shipping description" ;
+    rdfs:comment "ICAO shipping description." ;
+    rdfs:domain <http://example.com/sds_ontology#TransportationInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#imdgShippingDescription> a rdf:Property ;
+    rdfs:label "IMDG shipping description" ;
+    rdfs:comment "IMDG shipping description." ;
+    rdfs:domain <http://example.com/sds_ontology#TransportationInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#immediateMedicalAttentionNeeded> a rdf:Property ;
+    rdfs:label "immediate medical attention needed" ;
+    rdfs:comment "Indication of immediate medical attention needed." ;
+    rdfs:domain <http://example.com/sds_ontology#FirstAidMeasures> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#incompatibleMaterials> a rdf:Property ;
+    rdfs:label "incompatible materials" ;
+    rdfs:comment "Materials that are incompatible with the product." ;
+    rdfs:domain <http://example.com/sds_ontology#StabilityAndReactivity> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#informationTelephone> a rdf:Property ;
+    rdfs:label "information telephone" ;
+    rdfs:comment "General information telephone number." ;
+    rdfs:domain <http://example.com/sds_ontology#Manufacturer> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#ingestionFirstAid> a rdf:Property ;
+    rdfs:label "ingestion first aid" ;
+    rdfs:comment "First aid measures for ingestion." ;
+    rdfs:domain <http://example.com/sds_ontology#FirstAidMeasures> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#ingestionSymptomsOfOverexposure> a rdf:Property ;
+    rdfs:label "ingestion symptoms of overexposure" ;
+    rdfs:comment "Symptoms of overexposure by ingestion." ;
+    rdfs:domain <http://example.com/sds_ontology#ToxicologicalInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#ingredientGhsClassification> a rdf:Property ;
+    rdfs:label "ingredient GHS classification" ;
+    rdfs:comment "The HCS 2024 / GHS classification of the ingredient." ;
+    rdfs:domain <http://example.com/sds_ontology#Ingredient> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#ingredientName> a rdf:Property ;
+    rdfs:label "ingredient name" ;
+    rdfs:comment "The name of the ingredient." ;
+    rdfs:domain <http://example.com/sds_ontology#Ingredient> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#inhalationFirstAid> a rdf:Property ;
+    rdfs:label "inhalation first aid" ;
+    rdfs:comment "First aid measures for inhalation." ;
+    rdfs:domain <http://example.com/sds_ontology#FirstAidMeasures> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#inhalationSymptomsOfOverexposure> a rdf:Property ;
+    rdfs:label "inhalation symptoms of overexposure" ;
+    rdfs:comment "Symptoms of overexposure by inhalation." ;
+    rdfs:domain <http://example.com/sds_ontology#ToxicologicalInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#internationalCallsTelephone> a rdf:Property ;
+    rdfs:label "international calls telephone" ;
+    rdfs:comment "International calls emergency telephone number." ;
+    rdfs:domain <http://example.com/sds_ontology#Manufacturer> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#labelElementDanger> a rdf:Property ;
+    rdfs:label "label element danger" ;
+    rdfs:comment "The 'DANGER!' label element." ;
+    rdfs:domain <http://example.com/sds_ontology#HazardsIdentification> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#labelElementDisposal> a rdf:Property ;
+    rdfs:label "label element disposal" ;
+    rdfs:comment "A disposal statement from the label elements." ;
+    rdfs:domain <http://example.com/sds_ontology#HazardsIdentification> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#labelElementHazardStatement> a rdf:Property ;
+    rdfs:label "label element hazard statement" ;
+    rdfs:comment "A hazard statement from the label elements." ;
+    rdfs:domain <http://example.com/sds_ontology#HazardsIdentification> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#labelElementPrevention> a rdf:Property ;
+    rdfs:label "label element prevention" ;
+    rdfs:comment "A prevention statement from the label elements." ;
+    rdfs:domain <http://example.com/sds_ontology#HazardsIdentification> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#labelElementResponse> a rdf:Property ;
+    rdfs:label "label element response" ;
+    rdfs:comment "A response statement from the label elements." ;
+    rdfs:domain <http://example.com/sds_ontology#HazardsIdentification> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#labelElementStorage> a rdf:Property ;
+    rdfs:label "label element storage" ;
+    rdfs:comment "A storage statement from the label elements." ;
+    rdfs:domain <http://example.com/sds_ontology#HazardsIdentification> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#manufacturerAddress> a rdf:Property ;
+    rdfs:label "manufacturer address" ;
+    rdfs:comment "The address of the manufacturer." ;
+    rdfs:domain <http://example.com/sds_ontology#Manufacturer> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#manufacturerName> a rdf:Property ;
+    rdfs:label "manufacturer name" ;
+    rdfs:comment "The name of the manufacturer." ;
+    rdfs:domain <http://example.com/sds_ontology#Manufacturer> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#mobilityInSoil> a rdf:Property ;
+    rdfs:label "mobility in soil" ;
+    rdfs:comment "Information on mobility in soil." ;
+    rdfs:domain <http://example.com/sds_ontology#EcologicalInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#occupationalExposureLimit> a rdf:Property ;
+    rdfs:label "occupational exposure limit" ;
+    rdfs:comment "The specific occupational exposure limit." ;
+    rdfs:domain <http://example.com/sds_ontology#ExposureLimit> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#otherAdverseEffects> a rdf:Property ;
+    rdfs:label "other adverse effects" ;
+    rdfs:comment "Any other adverse ecological effects." ;
+    rdfs:domain <http://example.com/sds_ontology#EcologicalInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#persistenceAndDegradability> a rdf:Property ;
+    rdfs:label "persistence and degradability" ;
+    rdfs:comment "Information on persistence and degradability." ;
+    rdfs:domain <http://example.com/sds_ontology#EcologicalInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#personalPrecautions> a rdf:Property ;
+    rdfs:label "personal precautions, protective equipment and emergency procedures" ;
+    rdfs:comment "Personal precautions, protective equipment and emergency procedures for spills." ;
+    rdfs:domain <http://example.com/sds_ontology#AccidentalReleaseMeasures> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#possibilityOfHazardousReactions> a rdf:Property ;
+    rdfs:label "possibility of hazardous reactions" ;
+    rdfs:comment "Information on the possibility of hazardous reactions." ;
+    rdfs:domain <http://example.com/sds_ontology#StabilityAndReactivity> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#precautionsForSafeHandling> a rdf:Property ;
+    rdfs:label "precautions for safe handling" ;
+    rdfs:comment "Precautions for safe handling of the product." ;
+    rdfs:domain <http://example.com/sds_ontology#HandlingAndStorage> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#preparedBy> a rdf:Property ;
+    rdfs:label "prepared by" ;
+    rdfs:comment "The entity that prepared the SDS." ;
+    rdfs:domain <http://example.com/sds_ontology#OtherInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#productName> a rdf:Property ;
+    rdfs:label "product name" ;
+    rdfs:comment "The name of the product." ;
+    rdfs:domain <http://example.com/sds_ontology#Identification> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#productUse> a rdf:Property ;
+    rdfs:label "product use" ;
+    rdfs:comment "The intended use of the product." ;
+    rdfs:domain <http://example.com/sds_ontology#Identification> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#propertyName> a rdf:Property ;
+    rdfs:label "property name" ;
+    rdfs:comment "The name of the physical or chemical property." ;
+    rdfs:domain <http://example.com/sds_ontology#Property> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#propertyValue> a rdf:Property ;
+    rdfs:label "property value" ;
+    rdfs:comment "The value of the physical or chemical property." ;
+    rdfs:domain <http://example.com/sds_ontology#Property> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#reactivity> a rdf:Property ;
+    rdfs:label "reactivity" ;
+    rdfs:comment "Information on the product's reactivity." ;
+    rdfs:domain <http://example.com/sds_ontology#StabilityAndReactivity> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#reproductiveToxicity> a rdf:Property ;
+    rdfs:label "reproductive toxicity" ;
+    rdfs:comment "Information on reproductive toxicity." ;
+    rdfs:domain <http://example.com/sds_ontology#ToxicologicalInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#respiratoryProtectionConsumerUse> a rdf:Property ;
+    rdfs:label "respiratory protection for normal consumer use" ;
+    rdfs:comment "Respiratory protection recommendations for normal consumer use." ;
+    rdfs:domain <http://example.com/sds_ontology#ExposureControlsPersonalProtection> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#respiratoryProtectionWorkplaceUse> a rdf:Property ;
+    rdfs:label "respiratory protection for workplace use" ;
+    rdfs:comment "Respiratory protection recommendations for bulk processing or workplace use." ;
+    rdfs:domain <http://example.com/sds_ontology#ExposureControlsPersonalProtection> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#restrictionsOnUse> a rdf:Property ;
+    rdfs:label "restrictions on use" ;
+    rdfs:comment "Any identified restrictions on the use of the product." ;
+    rdfs:domain <http://example.com/sds_ontology#Identification> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#reviewedBy> a rdf:Property ;
+    rdfs:label "reviewed by" ;
+    rdfs:comment "The individual who reviewed the SDS." ;
+    rdfs:domain <http://example.com/sds_ontology#OtherInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#revisionDate> a rdf:Property ;
+    rdfs:label "revision date" ;
+    rdfs:comment "The date of the SDS revision." ;
+    rdfs:domain <http://example.com/sds_ontology#OtherInformation> ;
+    rdfs:range xsd:date .
+
+<http://example.com/sds_ontology#revisionSummary> a rdf:Property ;
+    rdfs:label "revision summary" ;
+    rdfs:comment "Summary of the revisions made." ;
+    rdfs:domain <http://example.com/sds_ontology#OtherInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#saraTitleIIIHazardCategory> a rdf:Property ;
+    rdfs:label "SARA Title III hazard category for Section 311/312" ;
+    rdfs:comment "SARA Title III Hazard Category for Section 311/312." ;
+    rdfs:domain <http://example.com/sds_ontology#RegulatoryInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#saraTitleIIIToxicChemicals> a rdf:Property ;
+    rdfs:label "SARA Title III Section 313 toxic chemicals" ;
+    rdfs:comment "SARA Title III Section 313 Toxic Chemicals." ;
+    rdfs:domain <http://example.com/sds_ontology#RegulatoryInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#sdsDateOfPreparation> a rdf:Property ;
+    rdfs:label "SDS date of preparation" ;
+    rdfs:comment "The date the SDS was prepared." ;
+    rdfs:domain <http://example.com/sds_ontology#SafetyDataSheet> ;
+    rdfs:range xsd:date .
+
+<http://example.com/sds_ontology#section302ExtremelyHazardousSubstances> a rdf:Property ;
+    rdfs:label "Section 302 extremely hazardous substances (TPQ)" ;
+    rdfs:comment "Section 302 Extremely Hazardous Substances (TPQ)." ;
+    rdfs:domain <http://example.com/sds_ontology#RegulatoryInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#signsAndSymptomsOfExposure> a rdf:Property ;
+    rdfs:label "signs and symptoms of exposure" ;
+    rdfs:comment "Description of signs and symptoms of exposure." ;
+    rdfs:domain <http://example.com/sds_ontology#FirstAidMeasures> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#skinContactFirstAid> a rdf:Property ;
+    rdfs:label "skin contact first aid" ;
+    rdfs:comment "First aid measures for skin contact." ;
+    rdfs:domain <http://example.com/sds_ontology#FirstAidMeasures> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#skinContactSymptomsOfOverexposure> a rdf:Property ;
+    rdfs:label "skin contact symptoms of overexposure" ;
+    rdfs:comment "Symptoms of overexposure by skin contact." ;
+    rdfs:domain <http://example.com/sds_ontology#ToxicologicalInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#skinProtectionConsumerUse> a rdf:Property ;
+    rdfs:label "skin protection for normal consumer use" ;
+    rdfs:comment "Skin protection recommendations for normal consumer use." ;
+    rdfs:domain <http://example.com/sds_ontology#ExposureControlsPersonalProtection> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#skinProtectionWorkplaceUse> a rdf:Property ;
+    rdfs:label "skin protection for workplace use" ;
+    rdfs:comment "Skin protection recommendations for bulk processing or workplace use." ;
+    rdfs:domain <http://example.com/sds_ontology#ExposureControlsPersonalProtection> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#specialProtectiveEquipmentForFireFighters> a rdf:Property ;
+    rdfs:label "special protective equipment and precautions for fire-fighters" ;
+    rdfs:comment "Special protective equipment and precautions for fire-fighters." ;
+    rdfs:domain <http://example.com/sds_ontology#FireFightingMeasures> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#specificHazards> a rdf:Property ;
+    rdfs:label "specific hazards arising from the chemical" ;
+    rdfs:comment "Specific hazards arising from the chemical during a fire." ;
+    rdfs:domain <http://example.com/sds_ontology#FireFightingMeasures> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#supersedesDate> a rdf:Property ;
+    rdfs:label "supersedes date" ;
+    rdfs:comment "The date of the SDS this revision supersedes." ;
+    rdfs:domain <http://example.com/sds_ontology#OtherInformation> ;
+    rdfs:range xsd:date .
+
+<http://example.com/sds_ontology#vocRegulations> a rdf:Property ;
+    rdfs:label "VOC regulations" ;
+    rdfs:comment "VOC regulations compliance." ;
+    rdfs:domain <http://example.com/sds_ontology#RegulatoryInformation> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#weightPercent> a rdf:Property ;
+    rdfs:label "weight percent" ;
+    rdfs:comment "The weight percentage of the ingredient in the product." ;
+    rdfs:domain <http://example.com/sds_ontology#Ingredient> ;
+    rdfs:range xsd:string .
+
+<http://example.com/sds_ontology#workHygienePractices> a rdf:Property ;
+    rdfs:label "work/hygiene practices" ;
+    rdfs:comment "Work/Hygiene practices." ;
+    rdfs:domain <http://example.com/sds_ontology#ExposureControlsPersonalProtection> ;
+    rdfs:range xsd:string .
+
+msds:0 msds:hasType "CARDINAL" .
+
+msds:0.8 msds:hasType "CARDINAL" .
+
+msds:0.82 msds:hasType "CARDINAL" .
+
+msds:1 msds:hasType "CARDINAL" .
+
+msds:1%20-800-424-9300 msds:hasType "CARDINAL" .
+
+msds:1%20-888-324-7596 msds:hasType "QUANTITY" .
+
+msds:1-888-324-7596 msds:hasType "QUANTITY" .
+
+msds:100 msds:hasType "CARDINAL" .
+
+msds:11 msds:hasType "CARDINAL" .
+
+msds:12 msds:hasType "CARDINAL" .
+
+msds:120 msds:hasType "CARDINAL" .
+
+msds:1200 msds:hasType "CARDINAL" .
+
+msds:122 msds:hasType "CARDINAL" .
+
+msds:13 msds:hasType "CARDINAL" .
+
+msds:138%EF%82%B0F msds:hasType "CARDINAL" .
+
+msds:14 msds:hasType "CARDINAL" .
+
+msds:183 msds:hasType "CARDINAL" .
+
+msds:187%C2%B0 msds:hasType "CARDINAL" .
+
+msds:1910.134 msds:hasType "CARDINAL" .
+
+msds:2 msds:hasType "CARDINAL" .
+
+msds:2-3%25 msds:hasType "PERCENT" .
+
+msds:2.1 msds:hasType "CARDINAL" .
+
+msds:2.1%20Ltd.%20Qty msds:hasType "ORG" .
+
+msds:2.79-2.96 msds:hasType "CARDINAL" .
+
+msds:2024 msds:hasType "DATE" .
+
+msds:24.1%25 msds:hasType "PERCENT" .
+
+msds:25%25 msds:hasType "PERCENT" .
+
+msds:3 msds:hasType "CARDINAL" .
+
+msds:30%2C0%20ppm msds:hasType "ORG" .
+
+msds:35%25 msds:hasType "PERCENT" .
+
+msds:361%20-%20369%EF%82%B0F msds:hasType "CARDINAL" .
+
+msds:4 msds:hasType "CARDINAL" .
+
+<http://example.org/msds#4012200/> msds:hasType "CARDINAL" .
+
+msds:45-50%25 msds:hasType "PERCENT" .
+
+msds:5 msds:hasType "CARDINAL" .
+
+msds:5%2C0 msds:hasType "CARDINAL" .
+
+msds:50%C2%B0 msds:hasType "CARDINAL" .
+
+msds:5000 msds:hasType "CARDINAL" .
+
+msds:59 msds:hasType "CARDINAL" .
+
+msds:6 msds:hasType "CARDINAL" .
+
+msds:6%25 msds:hasType "PERCENT" .
+
+msds:70 msds:hasType "DATE" .
+
+msds:8 msds:hasType "CARDINAL" .
+
+msds:8%25 msds:hasType "PERCENT" .
+
+msds:9 msds:hasType "CARDINAL" .
+
+msds:95 msds:hasType "CARDINAL" .
+
+msds:9715 msds:hasType "DATE" .
+
+msds:ANSI msds:hasType "ORG" .
+
+msds:Accidental%20Release%20Measures%20%20%0APersonal%20Precautions msds:hasType "ORG" .
+
+msds:Aerosols msds:hasType "ORG" .
+
+msds:Aliphatic%20Hydrocarbon%20%201200 msds:hasType "PERSON" .
+
+msds:Aspiration%20Hazard msds:hasType "PERSON" .
+
+msds:Bulk%20Processing%20or%20Workplace%20Use%20the%20Following%20Controls msds:hasType "WORK_OF_ART" .
+
+msds:Businesspark%20Avenue%20%20%0A%20%20%20San%20Diego msds:hasType "FAC" .
+
+msds:CERCLA msds:hasType "ORG" .
+
+msds:CT msds:hasType "ORG" .
+
+msds:California msds:hasType "GPE" .
+
+msds:California%20Proposition%2065 msds:hasType "ORG" .
+
+msds:California%20Safe%20Drinking%20Water%20and%20Toxic%20Enforcement%20Act msds:hasType "ORG" .
+
+msds:Canadian msds:hasType "NORP" .
+
+msds:Canadian%20Environmental%20Protection%20Ac msds:hasType "ORG" .
+
+msds:Carbon%20Dioxide msds:hasType "PERSON" .
+
+msds:Carbon%20Dioxide%20%205000 msds:hasType "PERSON" .
+
+msds:Carcinogen%20Status msds:hasType "PERSON" .
+
+msds:Chemical msds:hasType "ORG" .
+
+msds:Chemical%20Spills msds:hasType "ORG" .
+
+msds:Color msds:hasType "PERSON" .
+
+<http://example.org/msds#Containment/Cleanup> msds:hasType "ORG" .
+
+msds:Corrosion%20%20%0A%20%0ARestrictions msds:hasType "ORG" .
+
+msds:DANGER msds:hasType "ORG" .
+
+msds:Dermal msds:hasType "NORP" .
+
+msds:EPA msds:hasType "ORG" .
+
+msds:Extremely%20Flammable%20Aerosol msds:hasType "ORG" .
+
+msds:Flammable%20Aerosol%20%20Kinematic%20Viscosity msds:hasType "ORG" .
+
+msds:Flammable%20Limits msds:hasType "ORG" .
+
+msds:Flash%20Point%3A%20%20%20 msds:hasType "PERSON" .
+
+msds:Hazard%20Category%20for%20Section msds:hasType "PERSON" .
+
+msds:Hazardous%20Decomposition%20Products msds:hasType "ORG" .
+
+msds:I.%20Kowalski%20%20%20Regulatory%20Affairs%20Dept msds:hasType "PERSON" .
+
+msds:IARC msds:hasType "ORG" .
+
+<http://example.org/msds#Indication%20of%20Immediate%20Medical%20Attention/Special%20Treatment%20Needed%20%3A> msds:hasType "ORG" .
+
+msds:Industrial%20Hygiene msds:hasType "ORG" .
+
+msds:LLC msds:hasType "ORG" .
+
+msds:LTD%20QTY%20%20%0AICAO%20Shipping%20Description msds:hasType "ORG" .
+
+msds:Leaking msds:hasType "ORG" .
+
+msds:Limited%20Quantities msds:hasType "ORG" .
+
+msds:Manufacturer msds:hasType "PERSON" .
+
+msds:May msds:hasType "DATE" .
+
+msds:May%2016%2C%202024 msds:hasType "DATE" .
+
+msds:NIOSH msds:hasType "ORG" .
+
+msds:NTP msds:hasType "ORG" .
+
+msds:None%20%20%0AEPA%20Toxic%20Substances%20Control%20Act msds:hasType "ORG" .
+
+msds:November%2013%20%2C%202024 msds:hasType "DATE" .
+
+msds:November%2013%2C%202024%20%20%20%20%20Supersedes msds:hasType "DATE" .
+
+msds:Numerical%20Measures msds:hasType "ORG" .
+
+msds:OSHA%20Hazard%20Communication msds:hasType "ORG" .
+
+msds:Oil msds:hasType "PRODUCT" .
+
+msds:PEL msds:hasType "ORG" .
+
+msds:Physical%20Hazard msds:hasType "PERSON" .
+
+msds:Proposition%2065 msds:hasType "LAW" .
+
+msds:RCRA msds:hasType "ORG" .
+
+msds:Refer msds:hasType "PERSON" .
+
+msds:STEL%20ACGIH%20TLV msds:hasType "ORG" .
+
+msds:Section%202 msds:hasType "LAW" .
+
+msds:Section%20313%20Toxic%20Chemicals msds:hasType "ORG" .
+
+msds:Section%208%29 msds:hasType "LAW" .
+
+msds:Skin%20Contact msds:hasType "PERSON" .
+
+msds:Solubilities msds:hasType "ORG" .
+
+msds:Store msds:hasType "PERSON" .
+
+msds:TLV msds:hasType "ORG" .
+
+msds:TPQ msds:hasType "ORG" .
+
+msds:TSCA msds:hasType "ORG" .
+
+msds:TWA msds:hasType "ORG" .
+
+msds:The%20Following%20Controls msds:hasType "ORG" .
+
+msds:U%20N1950 msds:hasType "ORG" .
+
+msds:US msds:hasType "GPE" .
+
+msds:USA msds:hasType "GPE" .
+
+msds:WD%20-40%20Company msds:hasType "ORG" .
+
+msds:Wear msds:hasType "PERSON" .
+
+msds:empt%20y.%20%0AConditions%20for%20Safe%20Storage%3A%20Store msds:hasType "PERSON" .
+
+msds:several%20more%20minutes msds:hasType "TIME" .
+
+msds:the%20Clean%20Water%20Act msds:hasType "LAW" .
+
+msds:the%20National%20Response%20Center msds:hasType "ORG" .
+
+msds:the%20US%20Consumer%20Product%20%0ASafety%20Commission msds:hasType "ORG" .
+
+msds:the%20WD%20-40%20Safety%20Hotline msds:hasType "ORG" .
+
+msds:the%20first%205%20minutes msds:hasType "TIME" .
+
