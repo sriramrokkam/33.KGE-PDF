@@ -1,0 +1,1312 @@
+@prefix : <http://sap.com/kge/msds#MSDS_Ontology> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix msds: <http://sap.com/kge/msds#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://sap.com/kge/msds#MSDS_Ontology> .
+
+<http://sap.com/kge/msds#MSDS_Ontology> rdf:type owl:Ontology ;
+                                         dcterms:created "2025-07-30T16:43:34.293472"^^xsd:dateTime ;
+                                         dcterms:creator "SAP Innovation Team" ;
+                                         dcterms:description "Comprehensive ontology for Material Safety Data Sheet documents"@en ;
+                                         dcterms:title "SAP KGE MSDS Ontology"@en ;
+                                         owl:versionInfo "2.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://sap.com/kge/msds#causedBy
+msds:causedBy rdf:type owl:ObjectProperty ;
+              rdfs:domain msds:Hazard ;
+              rdfs:range msds:Ingredient ;
+              rdfs:comment "Links hazard to causing ingredient"@en ;
+              rdfs:label "causedBy"@en .
+
+
+###  http://sap.com/kge/msds#containsIngredient
+msds:containsIngredient rdf:type owl:ObjectProperty ;
+                        rdfs:domain msds:Product ;
+                        rdfs:range msds:Ingredient ;
+                        rdfs:comment "Links product to all ingredients"@en ;
+                        rdfs:label "containsIngredient"@en .
+
+
+###  http://sap.com/kge/msds#hasAccidentalReleaseMeasure
+msds:hasAccidentalReleaseMeasure rdf:type owl:ObjectProperty ;
+                                 rdfs:domain msds:Accidental_Release_Measures ;
+                                 rdfs:range msds:AccidentalReleaseMeasure ;
+                                 rdfs:comment "Links to release procedures"@en ;
+                                 rdfs:label "hasAccidentalReleaseMeasure"@en .
+
+
+###  http://sap.com/kge/msds#hasCompany
+msds:hasCompany rdf:type owl:ObjectProperty ;
+                rdfs:domain msds:MSDS_Document ;
+                rdfs:range msds:Company ;
+                rdfs:comment "Links document to responsible company"@en ;
+                rdfs:label "hasCompany"@en .
+
+
+###  http://sap.com/kge/msds#hasDisposal
+msds:hasDisposal rdf:type owl:ObjectProperty ;
+                 rdfs:domain msds:Disposal_Considerations ;
+                 rdfs:range msds:DisposalMethod ;
+                 rdfs:comment "Links to disposal methods"@en ;
+                 rdfs:label "hasDisposal"@en .
+
+
+###  http://sap.com/kge/msds#hasEcologicalInfo
+msds:hasEcologicalInfo rdf:type owl:ObjectProperty ;
+                       rdfs:domain msds:Ecological_Information ;
+                       rdfs:range msds:EcologicalInfo ;
+                       rdfs:comment "Links to ecological information"@en ;
+                       rdfs:label "hasEcologicalInfo"@en .
+
+
+###  http://sap.com/kge/msds#hasEmergencyContact
+msds:hasEmergencyContact rdf:type owl:ObjectProperty ;
+                         rdfs:domain msds:Company ;
+                         rdfs:range msds:EmergencyContact ;
+                         rdfs:comment "Links company to emergency contacts"@en ;
+                         rdfs:label "hasEmergencyContact"@en .
+
+
+###  http://sap.com/kge/msds#hasExposureControl
+msds:hasExposureControl rdf:type owl:ObjectProperty ;
+                        rdfs:domain msds:Exposure_Controls_Personal_Protection ;
+                        rdfs:range msds:ExposureControl ;
+                        rdfs:comment "Links to exposure controls"@en ;
+                        rdfs:label "hasExposureControl"@en .
+
+
+###  http://sap.com/kge/msds#hasExposureLimit
+msds:hasExposureLimit rdf:type owl:ObjectProperty ;
+                      rdfs:domain msds:Ingredient ;
+                      rdfs:range msds:ExposureLimit ;
+                      rdfs:comment "Links ingredient to exposure limits"@en ;
+                      rdfs:label "hasExposureLimit"@en .
+
+
+###  http://sap.com/kge/msds#hasFireFightingMeasure
+msds:hasFireFightingMeasure rdf:type owl:ObjectProperty ;
+                            rdfs:domain msds:Fire_Fighting_Measures ;
+                            rdfs:range msds:FireFightingMeasure ;
+                            rdfs:comment "Links to fire fighting measures"@en ;
+                            rdfs:label "hasFireFightingMeasure"@en .
+
+
+###  http://sap.com/kge/msds#hasFirstAid
+msds:hasFirstAid rdf:type owl:ObjectProperty ;
+                 rdfs:domain msds:First_Aid_Measures ;
+                 rdfs:range msds:FirstAidMeasure ;
+                 rdfs:comment "Links to first aid procedures"@en ;
+                 rdfs:label "hasFirstAid"@en .
+
+
+###  http://sap.com/kge/msds#hasHazard
+msds:hasHazard rdf:type owl:ObjectProperty ;
+               rdfs:domain msds:Hazards_Identification ;
+               rdfs:range msds:Hazard ;
+               rdfs:comment "Links to identified hazards"@en ;
+               rdfs:label "hasHazard"@en .
+
+
+###  http://sap.com/kge/msds#hasHazardClass
+msds:hasHazardClass rdf:type owl:ObjectProperty ;
+                    rdfs:domain msds:Hazard ;
+                    rdfs:range msds:HazardClass ;
+                    rdfs:comment "Links hazard to its classification"@en ;
+                    rdfs:label "hasHazardClass"@en .
+
+
+###  http://sap.com/kge/msds#hasIngredient
+msds:hasIngredient rdf:type owl:ObjectProperty ;
+                   rdfs:domain msds:Composition_Information_on_Ingredients ;
+                   rdfs:range msds:Ingredient ;
+                   rdfs:comment "Links to chemical ingredients"@en ;
+                   rdfs:label "hasIngredient"@en .
+
+
+###  http://sap.com/kge/msds#hasOtherInfo
+msds:hasOtherInfo rdf:type owl:ObjectProperty ;
+                  rdfs:domain msds:Other_Information ;
+                  rdfs:range msds:OtherInfo ;
+                  rdfs:comment "Links to additional information"@en ;
+                  rdfs:label "hasOtherInfo"@en .
+
+
+###  http://sap.com/kge/msds#hasPhysicalChemicalProperty
+msds:hasPhysicalChemicalProperty rdf:type owl:ObjectProperty ;
+                                 rdfs:domain msds:Physical_and_Chemical_Properties ;
+                                 rdfs:range msds:PhysicalChemicalProperty ;
+                                 rdfs:comment "Links to physical/chemical properties"@en ;
+                                 rdfs:label "hasPhysicalChemicalProperty"@en .
+
+
+###  http://sap.com/kge/msds#hasPhysicalState
+msds:hasPhysicalState rdf:type owl:ObjectProperty ;
+                      rdfs:domain msds:PhysicalChemicalProperty ;
+                      rdfs:range msds:PhysicalState ;
+                      rdfs:comment "Links to physical state"@en ;
+                      rdfs:label "hasPhysicalState"@en .
+
+
+###  http://sap.com/kge/msds#hasProduct
+msds:hasProduct rdf:type owl:ObjectProperty ;
+                rdfs:domain msds:MSDS_Document ;
+                rdfs:range msds:Product ;
+                rdfs:comment "Links document to the product described"@en ;
+                rdfs:label "hasProduct"@en .
+
+
+###  http://sap.com/kge/msds#hasRegulation
+msds:hasRegulation rdf:type owl:ObjectProperty ;
+                   rdfs:domain msds:Regulatory_Information ;
+                   rdfs:range msds:Regulation ;
+                   rdfs:comment "Links to regulatory information"@en ;
+                   rdfs:label "hasRegulation"@en .
+
+
+###  http://sap.com/kge/msds#hasSection
+msds:hasSection rdf:type owl:ObjectProperty ;
+                rdfs:domain msds:MSDS_Document ;
+                rdfs:range msds:Section ;
+                rdfs:comment "Links document to its sections"@en ;
+                rdfs:label "hasSection"@en .
+
+
+###  http://sap.com/kge/msds#hasStabilityReactivity
+msds:hasStabilityReactivity rdf:type owl:ObjectProperty ;
+                            rdfs:domain msds:Stability_and_Reactivity ;
+                            rdfs:range msds:StabilityReactivity ;
+                            rdfs:comment "Links to stability information"@en ;
+                            rdfs:label "hasStabilityReactivity"@en .
+
+
+###  http://sap.com/kge/msds#hasStorageCondition
+msds:hasStorageCondition rdf:type owl:ObjectProperty ;
+                         rdfs:domain msds:Handling_and_Storage ;
+                         rdfs:range msds:StorageCondition ;
+                         rdfs:comment "Links to storage requirements"@en ;
+                         rdfs:label "hasStorageCondition"@en .
+
+
+###  http://sap.com/kge/msds#hasToxicologicalInfo
+msds:hasToxicologicalInfo rdf:type owl:ObjectProperty ;
+                          rdfs:domain msds:Toxicological_Information ;
+                          rdfs:range msds:ToxicologicalInfo ;
+                          rdfs:comment "Links to toxicological data"@en ;
+                          rdfs:label "hasToxicologicalInfo"@en .
+
+
+###  http://sap.com/kge/msds#hasTransportationInfo
+msds:hasTransportationInfo rdf:type owl:ObjectProperty ;
+                           rdfs:domain msds:Transportation_Information ;
+                           rdfs:range msds:TransportationInfo ;
+                           rdfs:comment "Links to transportation requirements"@en ;
+                           rdfs:label "hasTransportationInfo"@en .
+
+
+###  http://sap.com/kge/msds#isMainIngredient
+msds:isMainIngredient rdf:type owl:ObjectProperty ;
+                      rdfs:domain msds:Product ;
+                      rdfs:range msds:Ingredient ;
+                      rdfs:comment "Links product to main ingredients"@en ;
+                      rdfs:label "isMainIngredient"@en .
+
+
+###  http://sap.com/kge/msds#mitigatedBy
+msds:mitigatedBy rdf:type owl:ObjectProperty ;
+                 rdfs:domain msds:Hazard ;
+                 rdfs:range msds:ProtectiveEquipment ;
+                 rdfs:comment "Links hazard to mitigation equipment"@en ;
+                 rdfs:label "mitigatedBy"@en .
+
+
+###  http://sap.com/kge/msds#requiresProtectiveEquipment
+msds:requiresProtectiveEquipment rdf:type owl:ObjectProperty ;
+                                 rdfs:domain msds:ExposureControl ;
+                                 rdfs:range msds:ProtectiveEquipment ;
+                                 rdfs:comment "Links to required PPE"@en ;
+                                 rdfs:label "requiresProtectiveEquipment"@en .
+
+
+###  http://sap.com/kge/msds#testedBy
+msds:testedBy rdf:type owl:ObjectProperty ;
+              rdfs:domain msds:PhysicalChemicalProperty ;
+              rdfs:range msds:TestMethod ;
+              rdfs:comment "Links property to test method"@en ;
+              rdfs:label "testedBy"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://sap.com/kge/msds#acuteToxicity
+msds:acuteToxicity rdf:type owl:DatatypeProperty ;
+                   rdfs:domain msds:ToxicologicalInfo ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Acute toxicity information"@en ;
+                   rdfs:label "acuteToxicity"@en .
+
+
+###  http://sap.com/kge/msds#address
+msds:address rdf:type owl:DatatypeProperty ;
+             rdfs:domain msds:Company ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Company address"@en ;
+             rdfs:label "address"@en .
+
+
+###  http://sap.com/kge/msds#bioaccumulation
+msds:bioaccumulation rdf:type owl:DatatypeProperty ;
+                     rdfs:domain msds:EcologicalInfo ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Bioaccumulation potential"@en ;
+                     rdfs:label "bioaccumulation"@en .
+
+
+###  http://sap.com/kge/msds#biodegradability
+msds:biodegradability rdf:type owl:DatatypeProperty ;
+                      rdfs:domain msds:EcologicalInfo ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Biodegradability information"@en ;
+                      rdfs:label "biodegradability"@en .
+
+
+###  http://sap.com/kge/msds#boilingPoint
+msds:boilingPoint rdf:type owl:DatatypeProperty ;
+                  rdfs:domain msds:PhysicalChemicalProperty ;
+                  rdfs:range xsd:decimal ;
+                  rdfs:comment "Boiling point in Celsius"@en ;
+                  rdfs:label "boilingPoint"@en .
+
+
+###  http://sap.com/kge/msds#casNumber
+msds:casNumber rdf:type owl:DatatypeProperty ;
+               rdfs:domain msds:Ingredient ;
+               rdfs:range xsd:string ;
+               rdfs:comment "CAS registry number"@en ;
+               rdfs:label "casNumber"@en .
+
+
+###  http://sap.com/kge/msds#chronicToxicity
+msds:chronicToxicity rdf:type owl:DatatypeProperty ;
+                     rdfs:domain msds:ToxicologicalInfo ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Chronic toxicity information"@en ;
+                     rdfs:label "chronicToxicity"@en .
+
+
+###  http://sap.com/kge/msds#color
+msds:color rdf:type owl:DatatypeProperty ;
+           rdfs:domain msds:PhysicalChemicalProperty ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Color description"@en ;
+           rdfs:label "color"@en .
+
+
+###  http://sap.com/kge/msds#companyName
+msds:companyName rdf:type owl:DatatypeProperty ;
+                 rdfs:domain msds:Company ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Name of the company"@en ;
+                 rdfs:label "companyName"@en .
+
+
+###  http://sap.com/kge/msds#complianceStatus
+msds:complianceStatus rdf:type owl:DatatypeProperty ;
+                      rdfs:domain msds:Regulation ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Compliance status"@en ;
+                      rdfs:label "complianceStatus"@en .
+
+
+###  http://sap.com/kge/msds#concentrationRange
+msds:concentrationRange rdf:type owl:DatatypeProperty ;
+                        rdfs:domain msds:Ingredient ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Concentration range"@en ;
+                        rdfs:label "concentrationRange"@en .
+
+
+###  http://sap.com/kge/msds#density
+msds:density rdf:type owl:DatatypeProperty ;
+             rdfs:domain msds:PhysicalChemicalProperty ;
+             rdfs:range xsd:decimal ;
+             rdfs:comment "Density in g/cm³"@en ;
+             rdfs:label "density"@en .
+
+
+###  http://sap.com/kge/msds#disclaimer
+msds:disclaimer rdf:type owl:DatatypeProperty ;
+                rdfs:domain msds:OtherInfo ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Disclaimer text"@en ;
+                rdfs:label "disclaimer"@en .
+
+
+###  http://sap.com/kge/msds#disposalMethod
+msds:disposalMethod rdf:type owl:DatatypeProperty ;
+                    rdfs:domain msds:DisposalMethod ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Disposal method description"@en ;
+                    rdfs:label "disposalMethod"@en .
+
+
+###  http://sap.com/kge/msds#documentId
+msds:documentId rdf:type owl:DatatypeProperty ;
+                rdfs:domain msds:MSDS_Document ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Unique document identifier"@en ;
+                rdfs:label "documentId"@en .
+
+
+###  http://sap.com/kge/msds#documentVersion
+msds:documentVersion rdf:type owl:DatatypeProperty ;
+                     rdfs:domain msds:MSDS_Document ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Document version"@en ;
+                     rdfs:label "documentVersion"@en .
+
+
+###  http://sap.com/kge/msds#ecNumber
+msds:ecNumber rdf:type owl:DatatypeProperty ;
+              rdfs:domain msds:Ingredient ;
+              rdfs:range xsd:string ;
+              rdfs:comment "EC number"@en ;
+              rdfs:label "ecNumber"@en .
+
+
+###  http://sap.com/kge/msds#ecoToxicity
+msds:ecoToxicity rdf:type owl:DatatypeProperty ;
+                 rdfs:domain msds:EcologicalInfo ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Ecotoxicity information"@en ;
+                 rdfs:label "ecoToxicity"@en .
+
+
+###  http://sap.com/kge/msds#emergencyPhone
+msds:emergencyPhone rdf:type owl:DatatypeProperty ;
+                    rdfs:domain msds:Company ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Emergency contact phone"@en ;
+                    rdfs:label "emergencyPhone"@en .
+
+
+###  http://sap.com/kge/msds#environmentalFate
+msds:environmentalFate rdf:type owl:DatatypeProperty ;
+                       rdfs:domain msds:EcologicalInfo ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Environmental fate information"@en ;
+                       rdfs:label "environmentalFate"@en .
+
+
+###  http://sap.com/kge/msds#exposureLimit
+msds:exposureLimit rdf:type owl:DatatypeProperty ;
+                   rdfs:domain msds:ExposureControl ;
+                   rdfs:range xsd:decimal ;
+                   rdfs:comment "Occupational exposure limit"@en ;
+                   rdfs:label "exposureLimit"@en .
+
+
+###  http://sap.com/kge/msds#exposureLimitType
+msds:exposureLimitType rdf:type owl:DatatypeProperty ;
+                       rdfs:domain msds:ExposureControl ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Type of exposure limit (TWA, STEL, etc.)"@en ;
+                       rdfs:label "exposureLimitType"@en .
+
+
+###  http://sap.com/kge/msds#exposureLimitUnit
+msds:exposureLimitUnit rdf:type owl:DatatypeProperty ;
+                       rdfs:domain msds:ExposureControl ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Unit for exposure limit"@en ;
+                       rdfs:label "exposureLimitUnit"@en .
+
+
+###  http://sap.com/kge/msds#extinguishingMedia
+msds:extinguishingMedia rdf:type owl:DatatypeProperty ;
+                        rdfs:domain msds:FireFightingMeasure ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Suitable extinguishing media"@en ;
+                        rdfs:label "extinguishingMedia"@en .
+
+
+###  http://sap.com/kge/msds#firstAidInstruction
+msds:firstAidInstruction rdf:type owl:DatatypeProperty ;
+                         rdfs:domain msds:FirstAidMeasure ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Detailed first aid instructions"@en ;
+                         rdfs:label "firstAidInstruction"@en .
+
+
+###  http://sap.com/kge/msds#firstAidType
+msds:firstAidType rdf:type owl:DatatypeProperty ;
+                  rdfs:domain msds:FirstAidMeasure ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Type of first aid (eye, skin, inhalation, ingestion)"@en ;
+                  rdfs:label "firstAidType"@en .
+
+
+###  http://sap.com/kge/msds#flashPoint
+msds:flashPoint rdf:type owl:DatatypeProperty ;
+                rdfs:domain msds:PhysicalChemicalProperty ;
+                rdfs:range xsd:decimal ;
+                rdfs:comment "Flash point in Celsius"@en ;
+                rdfs:label "flashPoint"@en .
+
+
+###  http://sap.com/kge/msds#hazardCategory
+msds:hazardCategory rdf:type owl:DatatypeProperty ;
+                    rdfs:domain msds:Hazard ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Hazard category classification"@en ;
+                    rdfs:label "hazardCategory"@en .
+
+
+###  http://sap.com/kge/msds#hazardCode
+msds:hazardCode rdf:type owl:DatatypeProperty ;
+                rdfs:domain msds:Hazard ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Hazard identification code"@en ;
+                rdfs:label "hazardCode"@en .
+
+
+###  http://sap.com/kge/msds#hazardStatement
+msds:hazardStatement rdf:type owl:DatatypeProperty ;
+                     rdfs:domain msds:Hazard ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Hazard statement text"@en ;
+                     rdfs:label "hazardStatement"@en .
+
+
+###  http://sap.com/kge/msds#hazardousDecomposition
+msds:hazardousDecomposition rdf:type owl:DatatypeProperty ;
+                            rdfs:domain msds:StabilityReactivity ;
+                            rdfs:range xsd:string ;
+                            rdfs:comment "Hazardous decomposition products"@en ;
+                            rdfs:label "hazardousDecomposition"@en .
+
+
+###  http://sap.com/kge/msds#immediateAction
+msds:immediateAction rdf:type owl:DatatypeProperty ;
+                     rdfs:domain msds:FirstAidMeasure ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Immediate action required"@en ;
+                     rdfs:label "immediateAction"@en .
+
+
+###  http://sap.com/kge/msds#incompatibleMaterials
+msds:incompatibleMaterials rdf:type owl:DatatypeProperty ;
+                           rdfs:domain msds:StabilityReactivity ;
+                           rdfs:range xsd:string ;
+                           rdfs:comment "Materials to avoid"@en ;
+                           rdfs:label "incompatibleMaterials"@en .
+
+
+###  http://sap.com/kge/msds#ingredientName
+msds:ingredientName rdf:type owl:DatatypeProperty ;
+                    rdfs:domain msds:Ingredient ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Name of the ingredient"@en ;
+                    rdfs:label "ingredientName"@en .
+
+
+###  http://sap.com/kge/msds#issueDate
+msds:issueDate rdf:type owl:DatatypeProperty ;
+               rdfs:domain msds:MSDS_Document ;
+               rdfs:range xsd:date ;
+               rdfs:comment "Document issue date"@en ;
+               rdfs:label "issueDate"@en .
+
+
+###  http://sap.com/kge/msds#language
+msds:language rdf:type owl:DatatypeProperty ;
+              rdfs:domain msds:MSDS_Document ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Document language"@en ;
+              rdfs:label "language"@en .
+
+
+###  http://sap.com/kge/msds#lastUpdated
+msds:lastUpdated rdf:type owl:DatatypeProperty ;
+                 rdfs:domain msds:Section ;
+                 rdfs:range xsd:dateTime ;
+                 rdfs:comment "Last update timestamp"@en ;
+                 rdfs:label "lastUpdated"@en .
+
+
+###  http://sap.com/kge/msds#ld50
+msds:ld50 rdf:type owl:DatatypeProperty ;
+          rdfs:domain msds:ToxicologicalInfo ;
+          rdfs:range xsd:decimal ;
+          rdfs:comment "LD50 value"@en ;
+          rdfs:label "ld50"@en .
+
+
+###  http://sap.com/kge/msds#marinePollutant
+msds:marinePollutant rdf:type owl:DatatypeProperty ;
+                     rdfs:domain msds:TransportationInfo ;
+                     rdfs:range xsd:boolean ;
+                     rdfs:comment "Marine pollutant status"@en ;
+                     rdfs:label "marinePollutant"@en .
+
+
+###  http://sap.com/kge/msds#medicalAttention
+msds:medicalAttention rdf:type owl:DatatypeProperty ;
+                      rdfs:domain msds:FirstAidMeasure ;
+                      rdfs:range xsd:boolean ;
+                      rdfs:comment "Whether medical attention is required"@en ;
+                      rdfs:label "medicalAttention"@en .
+
+
+###  http://sap.com/kge/msds#meltingPoint
+msds:meltingPoint rdf:type owl:DatatypeProperty ;
+                  rdfs:domain msds:PhysicalChemicalProperty ;
+                  rdfs:range xsd:decimal ;
+                  rdfs:comment "Melting point in Celsius"@en ;
+                  rdfs:label "meltingPoint"@en .
+
+
+###  http://sap.com/kge/msds#odor
+msds:odor rdf:type owl:DatatypeProperty ;
+          rdfs:domain msds:PhysicalChemicalProperty ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Odor description"@en ;
+          rdfs:label "odor"@en .
+
+
+###  http://sap.com/kge/msds#otherDetail
+msds:otherDetail rdf:type owl:DatatypeProperty ;
+                 rdfs:domain msds:OtherInfo ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Additional information details"@en ;
+                 rdfs:label "otherDetail"@en .
+
+
+###  http://sap.com/kge/msds#pH
+msds:pH rdf:type owl:DatatypeProperty ;
+        rdfs:domain msds:PhysicalChemicalProperty ;
+        rdfs:range xsd:decimal ;
+        rdfs:comment "pH value"@en ;
+        rdfs:label "pH"@en .
+
+
+###  http://sap.com/kge/msds#packingGroup
+msds:packingGroup rdf:type owl:DatatypeProperty ;
+                  rdfs:domain msds:TransportationInfo ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Packing group"@en ;
+                  rdfs:label "packingGroup"@en .
+
+
+###  http://sap.com/kge/msds#personalProtection
+msds:personalProtection rdf:type owl:DatatypeProperty ;
+                        rdfs:domain msds:ExposureControl ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Personal protection requirements"@en ;
+                        rdfs:label "personalProtection"@en .
+
+
+###  http://sap.com/kge/msds#phoneNumber
+msds:phoneNumber rdf:type owl:DatatypeProperty ;
+                 rdfs:domain msds:Company ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Company phone number"@en ;
+                 rdfs:label "phoneNumber"@en .
+
+
+###  http://sap.com/kge/msds#physicalState
+msds:physicalState rdf:type owl:DatatypeProperty ;
+                   rdfs:domain msds:PhysicalChemicalProperty ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Physical state (solid, liquid, gas)"@en ;
+                   rdfs:label "physicalState"@en .
+
+
+###  http://sap.com/kge/msds#precautionaryStatement
+msds:precautionaryStatement rdf:type owl:DatatypeProperty ;
+                            rdfs:domain msds:Hazard ;
+                            rdfs:range xsd:string ;
+                            rdfs:comment "Precautionary statement"@en ;
+                            rdfs:label "precautionaryStatement"@en .
+
+
+###  http://sap.com/kge/msds#preparationDate
+msds:preparationDate rdf:type owl:DatatypeProperty ;
+                     rdfs:domain msds:OtherInfo ;
+                     rdfs:range xsd:date ;
+                     rdfs:comment "Preparation date"@en ;
+                     rdfs:label "preparationDate"@en .
+
+
+###  http://sap.com/kge/msds#preparedBy
+msds:preparedBy rdf:type owl:DatatypeProperty ;
+                rdfs:domain msds:OtherInfo ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Prepared by information"@en ;
+                rdfs:label "preparedBy"@en .
+
+
+###  http://sap.com/kge/msds#productCode
+msds:productCode rdf:type owl:DatatypeProperty ;
+                 rdfs:domain msds:Product ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Product identification code"@en ;
+                 rdfs:label "productCode"@en .
+
+
+###  http://sap.com/kge/msds#productName
+msds:productName rdf:type owl:DatatypeProperty ;
+                 rdfs:domain msds:Product ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Name of the product"@en ;
+                 rdfs:label "productName"@en .
+
+
+###  http://sap.com/kge/msds#productType
+msds:productType rdf:type owl:DatatypeProperty ;
+                 rdfs:domain msds:Product ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Type or category of product"@en ;
+                 rdfs:label "productType"@en .
+
+
+###  http://sap.com/kge/msds#properShippingName
+msds:properShippingName rdf:type owl:DatatypeProperty ;
+                        rdfs:domain msds:TransportationInfo ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Proper shipping name"@en ;
+                        rdfs:label "properShippingName"@en .
+
+
+###  http://sap.com/kge/msds#protectiveEquipment
+msds:protectiveEquipment rdf:type owl:DatatypeProperty ;
+                         rdfs:domain msds:FireFightingMeasure ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Required protective equipment"@en ;
+                         rdfs:label "protectiveEquipment"@en .
+
+
+###  http://sap.com/kge/msds#purity
+msds:purity rdf:type owl:DatatypeProperty ;
+            rdfs:domain msds:Ingredient ;
+            rdfs:range xsd:decimal ;
+            rdfs:comment "Purity percentage"@en ;
+            rdfs:label "purity"@en .
+
+
+###  http://sap.com/kge/msds#reactivity
+msds:reactivity rdf:type owl:DatatypeProperty ;
+                rdfs:domain msds:StabilityReactivity ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Reactivity information"@en ;
+                rdfs:label "reactivity"@en .
+
+
+###  http://sap.com/kge/msds#recommendedUse
+msds:recommendedUse rdf:type owl:DatatypeProperty ;
+                    rdfs:domain msds:Product ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Recommended use of the product"@en ;
+                    rdfs:label "recommendedUse"@en .
+
+
+###  http://sap.com/kge/msds#regulationCountry
+msds:regulationCountry rdf:type owl:DatatypeProperty ;
+                       rdfs:domain msds:Regulation ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Country of regulation"@en ;
+                       rdfs:label "regulationCountry"@en .
+
+
+###  http://sap.com/kge/msds#regulationDetail
+msds:regulationDetail rdf:type owl:DatatypeProperty ;
+                      rdfs:domain msds:Regulation ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Regulation details"@en ;
+                      rdfs:label "regulationDetail"@en .
+
+
+###  http://sap.com/kge/msds#regulationName
+msds:regulationName rdf:type owl:DatatypeProperty ;
+                    rdfs:domain msds:Regulation ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Name of regulation"@en ;
+                    rdfs:label "regulationName"@en .
+
+
+###  http://sap.com/kge/msds#restrictedUse
+msds:restrictedUse rdf:type owl:DatatypeProperty ;
+                   rdfs:domain msds:Product ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Restricted uses of the product"@en ;
+                   rdfs:label "restrictedUse"@en .
+
+
+###  http://sap.com/kge/msds#revisionDate
+msds:revisionDate rdf:type owl:DatatypeProperty ;
+                  rdfs:domain msds:MSDS_Document ;
+                  rdfs:range xsd:date ;
+                  rdfs:comment "Document revision date"@en ;
+                  rdfs:label "revisionDate"@en .
+
+
+###  http://sap.com/kge/msds#routeOfExposure
+msds:routeOfExposure rdf:type owl:DatatypeProperty ;
+                     rdfs:domain msds:ToxicologicalInfo ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Route of exposure"@en ;
+                     rdfs:label "routeOfExposure"@en .
+
+
+###  http://sap.com/kge/msds#sectionNumber
+msds:sectionNumber rdf:type owl:DatatypeProperty ;
+                   rdfs:domain msds:Section ;
+                   rdfs:range xsd:integer ;
+                   rdfs:comment "Section number"@en ;
+                   rdfs:label "sectionNumber"@en .
+
+
+###  http://sap.com/kge/msds#sectionText
+msds:sectionText rdf:type owl:DatatypeProperty ;
+                 rdfs:domain msds:Section ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Full text content of the section"@en ;
+                 rdfs:label "sectionText"@en .
+
+
+###  http://sap.com/kge/msds#sectionTitle
+msds:sectionTitle rdf:type owl:DatatypeProperty ;
+                  rdfs:domain msds:Section ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Title of the section"@en ;
+                  rdfs:label "sectionTitle"@en .
+
+
+###  http://sap.com/kge/msds#signalWord
+msds:signalWord rdf:type owl:DatatypeProperty ;
+                rdfs:domain msds:Hazard ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Signal word (Danger/Warning)"@en ;
+                rdfs:label "signalWord"@en .
+
+
+###  http://sap.com/kge/msds#solubility
+msds:solubility rdf:type owl:DatatypeProperty ;
+                rdfs:domain msds:PhysicalChemicalProperty ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Solubility information"@en ;
+                rdfs:label "solubility"@en .
+
+
+###  http://sap.com/kge/msds#specialPrecautions
+msds:specialPrecautions rdf:type owl:DatatypeProperty ;
+                        rdfs:domain msds:DisposalMethod ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Special disposal precautions"@en ;
+                        rdfs:label "specialPrecautions"@en .
+
+
+###  http://sap.com/kge/msds#specificHazards
+msds:specificHazards rdf:type owl:DatatypeProperty ;
+                     rdfs:domain msds:FireFightingMeasure ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Specific fire hazards"@en ;
+                     rdfs:label "specificHazards"@en .
+
+
+###  http://sap.com/kge/msds#stability
+msds:stability rdf:type owl:DatatypeProperty ;
+               rdfs:domain msds:StabilityReactivity ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Chemical stability information"@en ;
+               rdfs:label "stability"@en .
+
+
+###  http://sap.com/kge/msds#toxicEffect
+msds:toxicEffect rdf:type owl:DatatypeProperty ;
+                 rdfs:domain msds:ToxicologicalInfo ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Toxic effects description"@en ;
+                 rdfs:label "toxicEffect"@en .
+
+
+###  http://sap.com/kge/msds#transportHazardClass
+msds:transportHazardClass rdf:type owl:DatatypeProperty ;
+                          rdfs:domain msds:TransportationInfo ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "Transport hazard class"@en ;
+                          rdfs:label "transportHazardClass"@en .
+
+
+###  http://sap.com/kge/msds#unNumber
+msds:unNumber rdf:type owl:DatatypeProperty ;
+              rdfs:domain msds:TransportationInfo ;
+              rdfs:range xsd:string ;
+              rdfs:comment "UN identification number"@en ;
+              rdfs:label "unNumber"@en .
+
+
+###  http://sap.com/kge/msds#unsuitableMedia
+msds:unsuitableMedia rdf:type owl:DatatypeProperty ;
+                     rdfs:domain msds:FireFightingMeasure ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Unsuitable extinguishing media"@en ;
+                     rdfs:label "unsuitableMedia"@en .
+
+
+###  http://sap.com/kge/msds#vaporPressure
+msds:vaporPressure rdf:type owl:DatatypeProperty ;
+                   rdfs:domain msds:PhysicalChemicalProperty ;
+                   rdfs:range xsd:decimal ;
+                   rdfs:comment "Vapor pressure"@en ;
+                   rdfs:label "vaporPressure"@en .
+
+
+###  http://sap.com/kge/msds#wasteCode
+msds:wasteCode rdf:type owl:DatatypeProperty ;
+               rdfs:domain msds:DisposalMethod ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Waste classification code"@en ;
+               rdfs:label "wasteCode"@en .
+
+
+###  http://sap.com/kge/msds#website
+msds:website rdf:type owl:DatatypeProperty ;
+             rdfs:domain msds:Company ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Company website URL"@en ;
+             rdfs:label "website"@en .
+
+
+###  http://sap.com/kge/msds#weightPercent
+msds:weightPercent rdf:type owl:DatatypeProperty ;
+                   rdfs:domain msds:Ingredient ;
+                   rdfs:range xsd:decimal ;
+                   rdfs:comment "Weight percentage in product"@en ;
+                   rdfs:label "weightPercent"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://sap.com/kge/msds#AccidentalReleaseMeasure
+msds:AccidentalReleaseMeasure rdf:type owl:Class ;
+                              rdfs:comment "Procedure for handling accidental releases"@en ;
+                              rdfs:label "AccidentalReleaseMeasure"@en .
+
+
+###  http://sap.com/kge/msds#Accidental_Release_Measures
+msds:Accidental_Release_Measures rdf:type owl:Class ;
+                                 rdfs:subClassOf msds:Section ;
+                                 owl:disjointWith msds:Composition_Information_on_Ingredients ,
+                                                  msds:Disposal_Considerations ,
+                                                  msds:Ecological_Information ,
+                                                  msds:Exposure_Controls_Personal_Protection ,
+                                                  msds:Fire_Fighting_Measures ,
+                                                  msds:First_Aid_Measures ,
+                                                  msds:Handling_and_Storage ,
+                                                  msds:Hazards_Identification ,
+                                                  msds:Identification ,
+                                                  msds:Other_Information ,
+                                                  msds:Physical_and_Chemical_Properties ,
+                                                  msds:Regulatory_Information ,
+                                                  msds:Stability_and_Reactivity ,
+                                                  msds:Toxicological_Information ,
+                                                  msds:Transportation_Information ;
+                                 rdfs:comment "Procedures for handling accidental releases"@en ;
+                                 rdfs:label "Accidental Release Measures"@en .
+
+
+###  http://sap.com/kge/msds#Company
+msds:Company rdf:type owl:Class ;
+             rdfs:comment "Company or organization"@en ;
+             rdfs:label "Company"@en .
+
+
+###  http://sap.com/kge/msds#Composition_Information_on_Ingredients
+msds:Composition_Information_on_Ingredients rdf:type owl:Class ;
+                                            rdfs:subClassOf msds:Section ;
+                                            owl:disjointWith msds:Disposal_Considerations ,
+                                                             msds:Ecological_Information ,
+                                                             msds:Exposure_Controls_Personal_Protection ,
+                                                             msds:Fire_Fighting_Measures ,
+                                                             msds:First_Aid_Measures ,
+                                                             msds:Handling_and_Storage ,
+                                                             msds:Hazards_Identification ,
+                                                             msds:Identification ,
+                                                             msds:Other_Information ,
+                                                             msds:Physical_and_Chemical_Properties ,
+                                                             msds:Regulatory_Information ,
+                                                             msds:Stability_and_Reactivity ,
+                                                             msds:Toxicological_Information ,
+                                                             msds:Transportation_Information ;
+                                            rdfs:comment "Information on ingredients and composition"@en ;
+                                            rdfs:label "Composition Information on Ingredients"@en .
+
+
+###  http://sap.com/kge/msds#DisposalMethod
+msds:DisposalMethod rdf:type owl:Class ;
+                    rdfs:comment "Disposal procedure or method"@en ;
+                    rdfs:label "DisposalMethod"@en .
+
+
+###  http://sap.com/kge/msds#Disposal_Considerations
+msds:Disposal_Considerations rdf:type owl:Class ;
+                             rdfs:subClassOf msds:Section ;
+                             owl:disjointWith msds:Ecological_Information ,
+                                              msds:Exposure_Controls_Personal_Protection ,
+                                              msds:Fire_Fighting_Measures ,
+                                              msds:First_Aid_Measures ,
+                                              msds:Handling_and_Storage ,
+                                              msds:Hazards_Identification ,
+                                              msds:Identification ,
+                                              msds:Other_Information ,
+                                              msds:Physical_and_Chemical_Properties ,
+                                              msds:Regulatory_Information ,
+                                              msds:Stability_and_Reactivity ,
+                                              msds:Toxicological_Information ,
+                                              msds:Transportation_Information ;
+                             rdfs:comment "Disposal methods and considerations"@en ;
+                             rdfs:label "Disposal Considerations"@en .
+
+
+###  http://sap.com/kge/msds#EcologicalInfo
+msds:EcologicalInfo rdf:type owl:Class ;
+                    rdfs:comment "Ecological impact information"@en ;
+                    rdfs:label "EcologicalInfo"@en .
+
+
+###  http://sap.com/kge/msds#Ecological_Information
+msds:Ecological_Information rdf:type owl:Class ;
+                            rdfs:subClassOf msds:Section ;
+                            owl:disjointWith msds:Exposure_Controls_Personal_Protection ,
+                                             msds:Fire_Fighting_Measures ,
+                                             msds:First_Aid_Measures ,
+                                             msds:Handling_and_Storage ,
+                                             msds:Hazards_Identification ,
+                                             msds:Identification ,
+                                             msds:Other_Information ,
+                                             msds:Physical_and_Chemical_Properties ,
+                                             msds:Regulatory_Information ,
+                                             msds:Stability_and_Reactivity ,
+                                             msds:Toxicological_Information ,
+                                             msds:Transportation_Information ;
+                            rdfs:comment "Ecological effects and environmental impact"@en ;
+                            rdfs:label "Ecological Information"@en .
+
+
+###  http://sap.com/kge/msds#EmergencyContact
+msds:EmergencyContact rdf:type owl:Class ;
+                      rdfs:comment "Emergency contact information"@en ;
+                      rdfs:label "EmergencyContact"@en .
+
+
+###  http://sap.com/kge/msds#ExposureControl
+msds:ExposureControl rdf:type owl:Class ;
+                     rdfs:comment "Exposure control measure"@en ;
+                     rdfs:label "ExposureControl"@en .
+
+
+###  http://sap.com/kge/msds#ExposureLimit
+msds:ExposureLimit rdf:type owl:Class ;
+                   rdfs:comment "Occupational exposure limit"@en ;
+                   rdfs:label "ExposureLimit"@en .
+
+
+###  http://sap.com/kge/msds#Exposure_Controls_Personal_Protection
+msds:Exposure_Controls_Personal_Protection rdf:type owl:Class ;
+                                           rdfs:subClassOf msds:Section ;
+                                           owl:disjointWith msds:Fire_Fighting_Measures ,
+                                                            msds:First_Aid_Measures ,
+                                                            msds:Handling_and_Storage ,
+                                                            msds:Hazards_Identification ,
+                                                            msds:Identification ,
+                                                            msds:Other_Information ,
+                                                            msds:Physical_and_Chemical_Properties ,
+                                                            msds:Regulatory_Information ,
+                                                            msds:Stability_and_Reactivity ,
+                                                            msds:Toxicological_Information ,
+                                                            msds:Transportation_Information ;
+                                           rdfs:comment "Exposure controls and personal protection"@en ;
+                                           rdfs:label "Exposure Controls Personal Protection"@en .
+
+
+###  http://sap.com/kge/msds#FireFightingMeasure
+msds:FireFightingMeasure rdf:type owl:Class ;
+                         rdfs:comment "Fire fighting procedure or equipment"@en ;
+                         rdfs:label "FireFightingMeasure"@en .
+
+
+###  http://sap.com/kge/msds#Fire_Fighting_Measures
+msds:Fire_Fighting_Measures rdf:type owl:Class ;
+                            rdfs:subClassOf msds:Section ;
+                            owl:disjointWith msds:First_Aid_Measures ,
+                                             msds:Handling_and_Storage ,
+                                             msds:Hazards_Identification ,
+                                             msds:Identification ,
+                                             msds:Other_Information ,
+                                             msds:Physical_and_Chemical_Properties ,
+                                             msds:Regulatory_Information ,
+                                             msds:Stability_and_Reactivity ,
+                                             msds:Toxicological_Information ,
+                                             msds:Transportation_Information ;
+                            rdfs:comment "Fire fighting procedures and equipment"@en ;
+                            rdfs:label "Fire Fighting Measures"@en .
+
+
+###  http://sap.com/kge/msds#FirstAidMeasure
+msds:FirstAidMeasure rdf:type owl:Class ;
+                     rdfs:comment "First aid procedure or measure"@en ;
+                     rdfs:label "FirstAidMeasure"@en .
+
+
+###  http://sap.com/kge/msds#First_Aid_Measures
+msds:First_Aid_Measures rdf:type owl:Class ;
+                        rdfs:subClassOf msds:Section ;
+                        owl:disjointWith msds:Handling_and_Storage ,
+                                         msds:Hazards_Identification ,
+                                         msds:Identification ,
+                                         msds:Other_Information ,
+                                         msds:Physical_and_Chemical_Properties ,
+                                         msds:Regulatory_Information ,
+                                         msds:Stability_and_Reactivity ,
+                                         msds:Toxicological_Information ,
+                                         msds:Transportation_Information ;
+                        rdfs:comment "First aid procedures and measures"@en ;
+                        rdfs:label "First Aid Measures"@en .
+
+
+###  http://sap.com/kge/msds#Handling_and_Storage
+msds:Handling_and_Storage rdf:type owl:Class ;
+                          rdfs:subClassOf msds:Section ;
+                          owl:disjointWith msds:Hazards_Identification ,
+                                           msds:Identification ,
+                                           msds:Other_Information ,
+                                           msds:Physical_and_Chemical_Properties ,
+                                           msds:Regulatory_Information ,
+                                           msds:Stability_and_Reactivity ,
+                                           msds:Toxicological_Information ,
+                                           msds:Transportation_Information ;
+                          rdfs:comment "Safe handling and storage conditions"@en ;
+                          rdfs:label "Handling and Storage"@en .
+
+
+###  http://sap.com/kge/msds#Hazard
+msds:Hazard rdf:type owl:Class ;
+            rdfs:comment "Safety hazard or risk"@en ;
+            rdfs:label "Hazard"@en .
+
+
+###  http://sap.com/kge/msds#HazardClass
+msds:HazardClass rdf:type owl:Class ;
+                 rdfs:comment "Classification of hazard type"@en ;
+                 rdfs:label "HazardClass"@en .
+
+
+###  http://sap.com/kge/msds#Hazards_Identification
+msds:Hazards_Identification rdf:type owl:Class ;
+                            rdfs:subClassOf msds:Section ;
+                            owl:disjointWith msds:Identification ,
+                                             msds:Other_Information ,
+                                             msds:Physical_and_Chemical_Properties ,
+                                             msds:Regulatory_Information ,
+                                             msds:Stability_and_Reactivity ,
+                                             msds:Toxicological_Information ,
+                                             msds:Transportation_Information ;
+                            rdfs:comment "Classification and hazard information"@en ;
+                            rdfs:label "Hazards Identification"@en .
+
+
+###  http://sap.com/kge/msds#Identification
+msds:Identification rdf:type owl:Class ;
+                    rdfs:subClassOf msds:Section ;
+                    owl:disjointWith msds:Other_Information ,
+                                     msds:Physical_and_Chemical_Properties ,
+                                     msds:Regulatory_Information ,
+                                     msds:Stability_and_Reactivity ,
+                                     msds:Toxicological_Information ,
+                                     msds:Transportation_Information ;
+                    rdfs:comment "Product and company identification information"@en ;
+                    rdfs:label "Identification"@en .
+
+
+###  http://sap.com/kge/msds#Ingredient
+msds:Ingredient rdf:type owl:Class ;
+                rdfs:comment "Chemical ingredient or component"@en ;
+                rdfs:label "Ingredient"@en .
+
+
+###  http://sap.com/kge/msds#MSDS_Document
+msds:MSDS_Document rdf:type owl:Class ;
+                   rdfs:comment "Material Safety Data Sheet document containing safety information"@en ;
+                   rdfs:label "MSDS Document"@en .
+
+
+###  http://sap.com/kge/msds#OtherInfo
+msds:OtherInfo rdf:type owl:Class ;
+               rdfs:comment "Additional miscellaneous information"@en ;
+               rdfs:label "OtherInfo"@en .
+
+
+###  http://sap.com/kge/msds#Other_Information
+msds:Other_Information rdf:type owl:Class ;
+                       rdfs:subClassOf msds:Section ;
+                       owl:disjointWith msds:Physical_and_Chemical_Properties ,
+                                        msds:Regulatory_Information ,
+                                        msds:Stability_and_Reactivity ,
+                                        msds:Toxicological_Information ,
+                                        msds:Transportation_Information ;
+                       rdfs:comment "Additional miscellaneous information"@en ;
+                       rdfs:label "Other Information"@en .
+
+
+###  http://sap.com/kge/msds#PhysicalChemicalProperty
+msds:PhysicalChemicalProperty rdf:type owl:Class ;
+                              rdfs:comment "Physical or chemical property"@en ;
+                              rdfs:label "PhysicalChemicalProperty"@en .
+
+
+###  http://sap.com/kge/msds#PhysicalState
+msds:PhysicalState rdf:type owl:Class ;
+                   rdfs:comment "Physical state of matter"@en ;
+                   rdfs:label "PhysicalState"@en .
+
+
+###  http://sap.com/kge/msds#Physical_and_Chemical_Properties
+msds:Physical_and_Chemical_Properties rdf:type owl:Class ;
+                                      rdfs:subClassOf msds:Section ;
+                                      owl:disjointWith msds:Regulatory_Information ,
+                                                       msds:Stability_and_Reactivity ,
+                                                       msds:Toxicological_Information ,
+                                                       msds:Transportation_Information ;
+                                      rdfs:comment "Physical and chemical properties"@en ;
+                                      rdfs:label "Physical and Chemical Properties"@en .
+
+
+###  http://sap.com/kge/msds#Product
+msds:Product rdf:type owl:Class ;
+             rdfs:comment "Chemical product"@en ;
+             rdfs:label "Product"@en .
+
+
+###  http://sap.com/kge/msds#ProtectiveEquipment
+msds:ProtectiveEquipment rdf:type owl:Class ;
+                         rdfs:comment "Personal protective equipment"@en ;
+                         rdfs:label "ProtectiveEquipment"@en .
+
+
+###  http://sap.com/kge/msds#Regulation
+msds:Regulation rdf:type owl:Class ;
+                rdfs:comment "Regulatory requirement or standard"@en ;
+                rdfs:label "Regulation"@en .
+
+
+###  http://sap.com/kge/msds#Regulatory_Information
+msds:Regulatory_Information rdf:type owl:Class ;
+                            rdfs:subClassOf msds:Section ;
+                            owl:disjointWith msds:Stability_and_Reactivity ,
+                                             msds:Toxicological_Information ,
+                                             msds:Transportation_Information ;
+                            rdfs:comment "Regulatory and compliance information"@en ;
+                            rdfs:label "Regulatory Information"@en .
+
+
+###  http://sap.com/kge/msds#Section
+msds:Section rdf:type owl:Class ;
+             rdfs:comment "Abstract class representing a section of an MSDS document"@en ;
+             rdfs:label "Section"@en .
+
+
+###  http://sap.com/kge/msds#StabilityReactivity
+msds:StabilityReactivity rdf:type owl:Class ;
+                         rdfs:comment "Stability and reactivity information"@en ;
+                         rdfs:label "StabilityReactivity"@en .
+
+
+###  http://sap.com/kge/msds#Stability_and_Reactivity
+msds:Stability_and_Reactivity rdf:type owl:Class ;
+                              rdfs:subClassOf msds:Section ;
+                              owl:disjointWith msds:Toxicological_Information ,
+                                               msds:Transportation_Information ;
+                              rdfs:comment "Stability and reactivity information"@en ;
+                              rdfs:label "Stability and Reactivity"@en .
+
+
+###  http://sap.com/kge/msds#StorageCondition
+msds:StorageCondition rdf:type owl:Class ;
+                      rdfs:comment "Storage requirement or condition"@en ;
+                      rdfs:label "StorageCondition"@en .
+
+
+###  http://sap.com/kge/msds#TestMethod
+msds:TestMethod rdf:type owl:Class ;
+                rdfs:comment "Testing or measurement method"@en ;
+                rdfs:label "TestMethod"@en .
+
+
+###  http://sap.com/kge/msds#ToxicologicalInfo
+msds:ToxicologicalInfo rdf:type owl:Class ;
+                       rdfs:comment "Toxicological information"@en ;
+                       rdfs:label "ToxicologicalInfo"@en .
+
+
+###  http://sap.com/kge/msds#Toxicological_Information
+msds:Toxicological_Information rdf:type owl:Class ;
+                               rdfs:subClassOf msds:Section ;
+                               owl:disjointWith msds:Transportation_Information ;
+                               rdfs:comment "Toxicological effects and information"@en ;
+                               rdfs:label "Toxicological Information"@en .
+
+
+###  http://sap.com/kge/msds#TransportationInfo
+msds:TransportationInfo rdf:type owl:Class ;
+                        rdfs:comment "Transportation requirement or information"@en ;
+                        rdfs:label "TransportationInfo"@en .
+
+
+###  http://sap.com/kge/msds#Transportation_Information
+msds:Transportation_Information rdf:type owl:Class ;
+                                rdfs:subClassOf msds:Section ;
+                                rdfs:comment "Transportation requirements and information"@en ;
+                                rdfs:label "Transportation Information"@en .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

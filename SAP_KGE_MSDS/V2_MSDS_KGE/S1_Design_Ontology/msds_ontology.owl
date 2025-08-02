@@ -1,0 +1,1132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#productCode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Product"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">productCode</rdfs:label>
+    <rdfs:comment xml:lang="en">Product identification code</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#documentId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#MSDS_Document"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">documentId</rdfs:label>
+    <rdfs:comment xml:lang="en">Unique document identifier</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#environmentalFate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#EcologicalInfo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">environmentalFate</rdfs:label>
+    <rdfs:comment xml:lang="en">Environmental fate information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#Disposal_Considerations">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://sap.com/kge/msds#Section"/>
+    <rdfs:label xml:lang="en">Disposal Considerations</rdfs:label>
+    <rdfs:comment xml:lang="en">Disposal methods and considerations</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Transportation_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Regulatory_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Other_Information"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#ExposureControl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">ExposureControl</rdfs:label>
+    <rdfs:comment xml:lang="en">Exposure control measure</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#immediateAction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#FirstAidMeasure"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">immediateAction</rdfs:label>
+    <rdfs:comment xml:lang="en">Immediate action required</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#Fire_Fighting_Measures">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://sap.com/kge/msds#Section"/>
+    <rdfs:label xml:lang="en">Fire Fighting Measures</rdfs:label>
+    <rdfs:comment xml:lang="en">Fire fighting procedures and equipment</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Accidental_Release_Measures"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Handling_and_Storage"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Exposure_Controls_Personal_Protection"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Physical_and_Chemical_Properties"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Stability_and_Reactivity"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Toxicological_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Ecological_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Disposal_Considerations"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Transportation_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Regulatory_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Other_Information"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#wasteCode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#DisposalMethod"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">wasteCode</rdfs:label>
+    <rdfs:comment xml:lang="en">Waste classification code</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#ecNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Ingredient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">ecNumber</rdfs:label>
+    <rdfs:comment xml:lang="en">EC number</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#precautionaryStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Hazard"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">precautionaryStatement</rdfs:label>
+    <rdfs:comment xml:lang="en">Precautionary statement</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#Stability_and_Reactivity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://sap.com/kge/msds#Section"/>
+    <rdfs:label xml:lang="en">Stability and Reactivity</rdfs:label>
+    <rdfs:comment xml:lang="en">Stability and reactivity information</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Toxicological_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Ecological_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Disposal_Considerations"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Transportation_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Regulatory_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Other_Information"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#toxicEffect">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#ToxicologicalInfo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">toxicEffect</rdfs:label>
+    <rdfs:comment xml:lang="en">Toxic effects description</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#color">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#PhysicalChemicalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">color</rdfs:label>
+    <rdfs:comment xml:lang="en">Color description</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#extinguishingMedia">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#FireFightingMeasure"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">extinguishingMedia</rdfs:label>
+    <rdfs:comment xml:lang="en">Suitable extinguishing media</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#bioaccumulation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#EcologicalInfo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">bioaccumulation</rdfs:label>
+    <rdfs:comment xml:lang="en">Bioaccumulation potential</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#pH">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#PhysicalChemicalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="en">pH</rdfs:label>
+    <rdfs:comment xml:lang="en">pH value</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#Toxicological_Information">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://sap.com/kge/msds#Section"/>
+    <rdfs:label xml:lang="en">Toxicological Information</rdfs:label>
+    <rdfs:comment xml:lang="en">Toxicological effects and information</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Ecological_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Disposal_Considerations"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Transportation_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Regulatory_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Other_Information"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hasFirstAid">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#First_Aid_Measures"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#FirstAidMeasure"/>
+    <rdfs:label xml:lang="en">hasFirstAid</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to first aid procedures</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hasPhysicalState">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#PhysicalChemicalProperty"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#PhysicalState"/>
+    <rdfs:label xml:lang="en">hasPhysicalState</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to physical state</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#ecoToxicity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#EcologicalInfo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">ecoToxicity</rdfs:label>
+    <rdfs:comment xml:lang="en">Ecotoxicity information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#preparedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#OtherInfo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">preparedBy</rdfs:label>
+    <rdfs:comment xml:lang="en">Prepared by information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#odor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#PhysicalChemicalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">odor</rdfs:label>
+    <rdfs:comment xml:lang="en">Odor description</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hasFireFightingMeasure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Fire_Fighting_Measures"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#FireFightingMeasure"/>
+    <rdfs:label xml:lang="en">hasFireFightingMeasure</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to fire fighting measures</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hasEmergencyContact">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Company"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#EmergencyContact"/>
+    <rdfs:label xml:lang="en">hasEmergencyContact</rdfs:label>
+    <rdfs:comment xml:lang="en">Links company to emergency contacts</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#First_Aid_Measures">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://sap.com/kge/msds#Section"/>
+    <rdfs:label xml:lang="en">First Aid Measures</rdfs:label>
+    <rdfs:comment xml:lang="en">First aid procedures and measures</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Fire_Fighting_Measures"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Accidental_Release_Measures"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Handling_and_Storage"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Exposure_Controls_Personal_Protection"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Physical_and_Chemical_Properties"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Stability_and_Reactivity"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Toxicological_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Ecological_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Disposal_Considerations"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Transportation_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Regulatory_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Other_Information"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#phoneNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Company"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">phoneNumber</rdfs:label>
+    <rdfs:comment xml:lang="en">Company phone number</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#Physical_and_Chemical_Properties">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://sap.com/kge/msds#Section"/>
+    <rdfs:label xml:lang="en">Physical and Chemical Properties</rdfs:label>
+    <rdfs:comment xml:lang="en">Physical and chemical properties</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Stability_and_Reactivity"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Toxicological_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Ecological_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Disposal_Considerations"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Transportation_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Regulatory_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Other_Information"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#mitigatedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Hazard"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#ProtectiveEquipment"/>
+    <rdfs:label xml:lang="en">mitigatedBy</rdfs:label>
+    <rdfs:comment xml:lang="en">Links hazard to mitigation equipment</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#TestMethod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">TestMethod</rdfs:label>
+    <rdfs:comment xml:lang="en">Testing or measurement method</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#_restriction_-2677851639755245609">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://sap.com/kge/msds#hasCompany"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hasExposureControl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Exposure_Controls_Personal_Protection"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#ExposureControl"/>
+    <rdfs:label xml:lang="en">hasExposureControl</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to exposure controls</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#boilingPoint">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#PhysicalChemicalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="en">boilingPoint</rdfs:label>
+    <rdfs:comment xml:lang="en">Boiling point in Celsius</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#Composition_Information_on_Ingredients">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://sap.com/kge/msds#Section"/>
+    <rdfs:label xml:lang="en">Composition Information on Ingredients</rdfs:label>
+    <rdfs:comment xml:lang="en">Information on ingredients and composition</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#First_Aid_Measures"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Fire_Fighting_Measures"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Accidental_Release_Measures"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Handling_and_Storage"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Exposure_Controls_Personal_Protection"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Physical_and_Chemical_Properties"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Stability_and_Reactivity"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Toxicological_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Ecological_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Disposal_Considerations"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Transportation_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Regulatory_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Other_Information"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#productName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Product"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">productName</rdfs:label>
+    <rdfs:comment xml:lang="en">Name of the product</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hazardCategory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Hazard"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">hazardCategory</rdfs:label>
+    <rdfs:comment xml:lang="en">Hazard category classification</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#MSDS_Ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dcterms:title xml:lang="en">SAP KGE MSDS Ontology</dcterms:title>
+    <dcterms:description xml:lang="en">Comprehensive ontology for Material Safety Data Sheet documents</dcterms:description>
+    <dcterms:creator>SAP Innovation Team</dcterms:creator>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-07-30T16:43:34.293472</dcterms:created>
+    <owl:versionInfo>2.0</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#acuteToxicity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#ToxicologicalInfo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">acuteToxicity</rdfs:label>
+    <rdfs:comment xml:lang="en">Acute toxicity information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#Accidental_Release_Measures">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://sap.com/kge/msds#Section"/>
+    <rdfs:label xml:lang="en">Accidental Release Measures</rdfs:label>
+    <rdfs:comment xml:lang="en">Procedures for handling accidental releases</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Handling_and_Storage"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Exposure_Controls_Personal_Protection"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Physical_and_Chemical_Properties"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Stability_and_Reactivity"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Toxicological_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Ecological_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Disposal_Considerations"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Transportation_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Regulatory_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Other_Information"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#StorageCondition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">StorageCondition</rdfs:label>
+    <rdfs:comment xml:lang="en">Storage requirement or condition</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#Section">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Section</rdfs:label>
+    <rdfs:comment xml:lang="en">Abstract class representing a section of an MSDS document</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#Identification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://sap.com/kge/msds#Section"/>
+    <rdfs:label xml:lang="en">Identification</rdfs:label>
+    <rdfs:comment xml:lang="en">Product and company identification information</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Hazards_Identification"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Composition_Information_on_Ingredients"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#First_Aid_Measures"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Fire_Fighting_Measures"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Accidental_Release_Measures"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Handling_and_Storage"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Exposure_Controls_Personal_Protection"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Physical_and_Chemical_Properties"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Stability_and_Reactivity"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Toxicological_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Ecological_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Disposal_Considerations"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Transportation_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Regulatory_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Other_Information"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#Handling_and_Storage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://sap.com/kge/msds#Section"/>
+    <rdfs:label xml:lang="en">Handling and Storage</rdfs:label>
+    <rdfs:comment xml:lang="en">Safe handling and storage conditions</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Exposure_Controls_Personal_Protection"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Physical_and_Chemical_Properties"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Stability_and_Reactivity"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Toxicological_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Ecological_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Disposal_Considerations"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Transportation_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Regulatory_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Other_Information"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#recommendedUse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Product"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">recommendedUse</rdfs:label>
+    <rdfs:comment xml:lang="en">Recommended use of the product</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#vaporPressure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#PhysicalChemicalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="en">vaporPressure</rdfs:label>
+    <rdfs:comment xml:lang="en">Vapor pressure</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#meltingPoint">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#PhysicalChemicalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="en">meltingPoint</rdfs:label>
+    <rdfs:comment xml:lang="en">Melting point in Celsius</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hasStabilityReactivity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Stability_and_Reactivity"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#StabilityReactivity"/>
+    <rdfs:label xml:lang="en">hasStabilityReactivity</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to stability information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#medicalAttention">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#FirstAidMeasure"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label xml:lang="en">medicalAttention</rdfs:label>
+    <rdfs:comment xml:lang="en">Whether medical attention is required</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#TransportationInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">TransportationInfo</rdfs:label>
+    <rdfs:comment xml:lang="en">Transportation requirement or information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#unsuitableMedia">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#FireFightingMeasure"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">unsuitableMedia</rdfs:label>
+    <rdfs:comment xml:lang="en">Unsuitable extinguishing media</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#purity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Ingredient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="en">purity</rdfs:label>
+    <rdfs:comment xml:lang="en">Purity percentage</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#ld50">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#ToxicologicalInfo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="en">ld50</rdfs:label>
+    <rdfs:comment xml:lang="en">LD50 value</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#Hazards_Identification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://sap.com/kge/msds#Section"/>
+    <rdfs:label xml:lang="en">Hazards Identification</rdfs:label>
+    <rdfs:comment xml:lang="en">Classification and hazard information</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Composition_Information_on_Ingredients"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#First_Aid_Measures"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Fire_Fighting_Measures"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Accidental_Release_Measures"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Handling_and_Storage"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Exposure_Controls_Personal_Protection"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Physical_and_Chemical_Properties"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Stability_and_Reactivity"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Toxicological_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Ecological_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Disposal_Considerations"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Transportation_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Regulatory_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Other_Information"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#lastUpdated">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Section"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label xml:lang="en">lastUpdated</rdfs:label>
+    <rdfs:comment xml:lang="en">Last update timestamp</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#regulationDetail">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Regulation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">regulationDetail</rdfs:label>
+    <rdfs:comment xml:lang="en">Regulation details</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#weightPercent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Ingredient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="en">weightPercent</rdfs:label>
+    <rdfs:comment xml:lang="en">Weight percentage in product</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#exposureLimit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#ExposureControl"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="en">exposureLimit</rdfs:label>
+    <rdfs:comment xml:lang="en">Occupational exposure limit</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#documentVersion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#MSDS_Document"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">documentVersion</rdfs:label>
+    <rdfs:comment xml:lang="en">Document version</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#Regulatory_Information">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://sap.com/kge/msds#Section"/>
+    <rdfs:label xml:lang="en">Regulatory Information</rdfs:label>
+    <rdfs:comment xml:lang="en">Regulatory and compliance information</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Other_Information"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hasHazardClass">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Hazard"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#HazardClass"/>
+    <rdfs:label xml:lang="en">hasHazardClass</rdfs:label>
+    <rdfs:comment xml:lang="en">Links hazard to its classification</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#FirstAidMeasure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">FirstAidMeasure</rdfs:label>
+    <rdfs:comment xml:lang="en">First aid procedure or measure</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hasHazard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Hazards_Identification"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#Hazard"/>
+    <rdfs:label xml:lang="en">hasHazard</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to identified hazards</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hasDisposal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Disposal_Considerations"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#DisposalMethod"/>
+    <rdfs:label xml:lang="en">hasDisposal</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to disposal methods</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#ExposureLimit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">ExposureLimit</rdfs:label>
+    <rdfs:comment xml:lang="en">Occupational exposure limit</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hasRegulation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Regulatory_Information"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#Regulation"/>
+    <rdfs:label xml:lang="en">hasRegulation</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to regulatory information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#Ecological_Information">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://sap.com/kge/msds#Section"/>
+    <rdfs:label xml:lang="en">Ecological Information</rdfs:label>
+    <rdfs:comment xml:lang="en">Ecological effects and environmental impact</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Disposal_Considerations"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Transportation_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Regulatory_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Other_Information"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hasIngredient">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Composition_Information_on_Ingredients"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#Ingredient"/>
+    <rdfs:label xml:lang="en">hasIngredient</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to chemical ingredients</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#Transportation_Information">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://sap.com/kge/msds#Section"/>
+    <rdfs:label xml:lang="en">Transportation Information</rdfs:label>
+    <rdfs:comment xml:lang="en">Transportation requirements and information</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Regulatory_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Other_Information"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#personalProtection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#ExposureControl"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">personalProtection</rdfs:label>
+    <rdfs:comment xml:lang="en">Personal protection requirements</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#incompatibleMaterials">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#StabilityReactivity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">incompatibleMaterials</rdfs:label>
+    <rdfs:comment xml:lang="en">Materials to avoid</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#solubility">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#PhysicalChemicalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">solubility</rdfs:label>
+    <rdfs:comment xml:lang="en">Solubility information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#_restriction_-8451958900558975053">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://sap.com/kge/msds#hasSection"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#properShippingName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#TransportationInfo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">properShippingName</rdfs:label>
+    <rdfs:comment xml:lang="en">Proper shipping name</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#FireFightingMeasure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">FireFightingMeasure</rdfs:label>
+    <rdfs:comment xml:lang="en">Fire fighting procedure or equipment</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#unNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#TransportationInfo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">unNumber</rdfs:label>
+    <rdfs:comment xml:lang="en">UN identification number</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#packingGroup">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#TransportationInfo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">packingGroup</rdfs:label>
+    <rdfs:comment xml:lang="en">Packing group</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#specificHazards">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#FireFightingMeasure"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">specificHazards</rdfs:label>
+    <rdfs:comment xml:lang="en">Specific fire hazards</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hasOtherInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Other_Information"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#OtherInfo"/>
+    <rdfs:label xml:lang="en">hasOtherInfo</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to additional information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hazardStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Hazard"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">hazardStatement</rdfs:label>
+    <rdfs:comment xml:lang="en">Hazard statement text</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hasProduct">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#MSDS_Document"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#Product"/>
+    <rdfs:label xml:lang="en">hasProduct</rdfs:label>
+    <rdfs:comment xml:lang="en">Links document to the product described</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hasCompany">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#MSDS_Document"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#Company"/>
+    <rdfs:label xml:lang="en">hasCompany</rdfs:label>
+    <rdfs:comment xml:lang="en">Links document to responsible company</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#routeOfExposure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#ToxicologicalInfo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">routeOfExposure</rdfs:label>
+    <rdfs:comment xml:lang="en">Route of exposure</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#issueDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#MSDS_Document"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label xml:lang="en">issueDate</rdfs:label>
+    <rdfs:comment xml:lang="en">Document issue date</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#regulationCountry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Regulation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">regulationCountry</rdfs:label>
+    <rdfs:comment xml:lang="en">Country of regulation</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#otherDetail">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#OtherInfo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">otherDetail</rdfs:label>
+    <rdfs:comment xml:lang="en">Additional information details</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#firstAidInstruction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#FirstAidMeasure"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">firstAidInstruction</rdfs:label>
+    <rdfs:comment xml:lang="en">Detailed first aid instructions</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#Exposure_Controls_Personal_Protection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://sap.com/kge/msds#Section"/>
+    <rdfs:label xml:lang="en">Exposure Controls Personal Protection</rdfs:label>
+    <rdfs:comment xml:lang="en">Exposure controls and personal protection</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Physical_and_Chemical_Properties"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Stability_and_Reactivity"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Toxicological_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Ecological_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Disposal_Considerations"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Transportation_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Regulatory_Information"/>
+    <owl:disjointWith rdf:resource="http://sap.com/kge/msds#Other_Information"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#complianceStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Regulation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">complianceStatus</rdfs:label>
+    <rdfs:comment xml:lang="en">Compliance status</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#causedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Hazard"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#Ingredient"/>
+    <rdfs:label xml:lang="en">causedBy</rdfs:label>
+    <rdfs:comment xml:lang="en">Links hazard to causing ingredient</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#firstAidType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#FirstAidMeasure"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">firstAidType</rdfs:label>
+    <rdfs:comment xml:lang="en">Type of first aid (eye, skin, inhalation, ingestion)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#biodegradability">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#EcologicalInfo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">biodegradability</rdfs:label>
+    <rdfs:comment xml:lang="en">Biodegradability information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#revisionDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#MSDS_Document"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label xml:lang="en">revisionDate</rdfs:label>
+    <rdfs:comment xml:lang="en">Document revision date</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hasTransportationInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Transportation_Information"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#TransportationInfo"/>
+    <rdfs:label xml:lang="en">hasTransportationInfo</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to transportation requirements</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#PhysicalState">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">PhysicalState</rdfs:label>
+    <rdfs:comment xml:lang="en">Physical state of matter</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#MSDS_Document">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">MSDS Document</rdfs:label>
+    <rdfs:comment xml:lang="en">Material Safety Data Sheet document containing safety information</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://sap.com/kge/msds#_restriction_-8451958900558975053"/>
+    <rdfs:subClassOf rdf:resource="http://sap.com/kge/msds#_restriction_-2677851639755245609"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#Other_Information">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://sap.com/kge/msds#Section"/>
+    <rdfs:label xml:lang="en">Other Information</rdfs:label>
+    <rdfs:comment xml:lang="en">Additional miscellaneous information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#containsIngredient">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Product"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#Ingredient"/>
+    <rdfs:label xml:lang="en">containsIngredient</rdfs:label>
+    <rdfs:comment xml:lang="en">Links product to all ingredients</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#Company">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Company</rdfs:label>
+    <rdfs:comment xml:lang="en">Company or organization</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hasAccidentalReleaseMeasure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Accidental_Release_Measures"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#AccidentalReleaseMeasure"/>
+    <rdfs:label xml:lang="en">hasAccidentalReleaseMeasure</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to release procedures</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#flashPoint">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#PhysicalChemicalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="en">flashPoint</rdfs:label>
+    <rdfs:comment xml:lang="en">Flash point in Celsius</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#ProtectiveEquipment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">ProtectiveEquipment</rdfs:label>
+    <rdfs:comment xml:lang="en">Personal protective equipment</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#concentrationRange">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Ingredient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">concentrationRange</rdfs:label>
+    <rdfs:comment xml:lang="en">Concentration range</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#address">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Company"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">address</rdfs:label>
+    <rdfs:comment xml:lang="en">Company address</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#reactivity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#StabilityReactivity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">reactivity</rdfs:label>
+    <rdfs:comment xml:lang="en">Reactivity information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#ToxicologicalInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">ToxicologicalInfo</rdfs:label>
+    <rdfs:comment xml:lang="en">Toxicological information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hasEcologicalInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Ecological_Information"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#EcologicalInfo"/>
+    <rdfs:label xml:lang="en">hasEcologicalInfo</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to ecological information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#sectionNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Section"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label xml:lang="en">sectionNumber</rdfs:label>
+    <rdfs:comment xml:lang="en">Section number</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#HazardClass">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">HazardClass</rdfs:label>
+    <rdfs:comment xml:lang="en">Classification of hazard type</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#transportHazardClass">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#TransportationInfo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">transportHazardClass</rdfs:label>
+    <rdfs:comment xml:lang="en">Transport hazard class</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hasExposureLimit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Ingredient"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#ExposureLimit"/>
+    <rdfs:label xml:lang="en">hasExposureLimit</rdfs:label>
+    <rdfs:comment xml:lang="en">Links ingredient to exposure limits</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#sectionText">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Section"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">sectionText</rdfs:label>
+    <rdfs:comment xml:lang="en">Full text content of the section</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#regulationName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Regulation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">regulationName</rdfs:label>
+    <rdfs:comment xml:lang="en">Name of regulation</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hasToxicologicalInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Toxicological_Information"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#ToxicologicalInfo"/>
+    <rdfs:label xml:lang="en">hasToxicologicalInfo</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to toxicological data</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#Product">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Product</rdfs:label>
+    <rdfs:comment xml:lang="en">Chemical product</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#language">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#MSDS_Document"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">language</rdfs:label>
+    <rdfs:comment xml:lang="en">Document language</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hasSection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#MSDS_Document"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#Section"/>
+    <rdfs:label xml:lang="en">hasSection</rdfs:label>
+    <rdfs:comment xml:lang="en">Links document to its sections</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#sectionTitle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Section"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">sectionTitle</rdfs:label>
+    <rdfs:comment xml:lang="en">Title of the section</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hazardCode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Hazard"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">hazardCode</rdfs:label>
+    <rdfs:comment xml:lang="en">Hazard identification code</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#testedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#PhysicalChemicalProperty"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#TestMethod"/>
+    <rdfs:label xml:lang="en">testedBy</rdfs:label>
+    <rdfs:comment xml:lang="en">Links property to test method</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#Ingredient">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Ingredient</rdfs:label>
+    <rdfs:comment xml:lang="en">Chemical ingredient or component</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#DisposalMethod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">DisposalMethod</rdfs:label>
+    <rdfs:comment xml:lang="en">Disposal procedure or method</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#companyName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Company"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">companyName</rdfs:label>
+    <rdfs:comment xml:lang="en">Name of the company</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hazardousDecomposition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#StabilityReactivity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">hazardousDecomposition</rdfs:label>
+    <rdfs:comment xml:lang="en">Hazardous decomposition products</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#density">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#PhysicalChemicalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="en">density</rdfs:label>
+    <rdfs:comment xml:lang="en">Density in g/cm³</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#OtherInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">OtherInfo</rdfs:label>
+    <rdfs:comment xml:lang="en">Additional miscellaneous information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#marinePollutant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#TransportationInfo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label xml:lang="en">marinePollutant</rdfs:label>
+    <rdfs:comment xml:lang="en">Marine pollutant status</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#stability">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#StabilityReactivity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">stability</rdfs:label>
+    <rdfs:comment xml:lang="en">Chemical stability information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#casNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Ingredient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">casNumber</rdfs:label>
+    <rdfs:comment xml:lang="en">CAS registry number</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#requiresProtectiveEquipment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#ExposureControl"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#ProtectiveEquipment"/>
+    <rdfs:label xml:lang="en">requiresProtectiveEquipment</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to required PPE</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#restrictedUse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Product"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">restrictedUse</rdfs:label>
+    <rdfs:comment xml:lang="en">Restricted uses of the product</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#protectiveEquipment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#FireFightingMeasure"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">protectiveEquipment</rdfs:label>
+    <rdfs:comment xml:lang="en">Required protective equipment</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hasPhysicalChemicalProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Physical_and_Chemical_Properties"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#PhysicalChemicalProperty"/>
+    <rdfs:label xml:lang="en">hasPhysicalChemicalProperty</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to physical/chemical properties</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#signalWord">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Hazard"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">signalWord</rdfs:label>
+    <rdfs:comment xml:lang="en">Signal word (Danger/Warning)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#specialPrecautions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#DisposalMethod"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">specialPrecautions</rdfs:label>
+    <rdfs:comment xml:lang="en">Special disposal precautions</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#Regulation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Regulation</rdfs:label>
+    <rdfs:comment xml:lang="en">Regulatory requirement or standard</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#StabilityReactivity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">StabilityReactivity</rdfs:label>
+    <rdfs:comment xml:lang="en">Stability and reactivity information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#disclaimer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#OtherInfo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">disclaimer</rdfs:label>
+    <rdfs:comment xml:lang="en">Disclaimer text</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#Hazard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Hazard</rdfs:label>
+    <rdfs:comment xml:lang="en">Safety hazard or risk</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#website">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Company"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">website</rdfs:label>
+    <rdfs:comment xml:lang="en">Company website URL</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#physicalState">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#PhysicalChemicalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">physicalState</rdfs:label>
+    <rdfs:comment xml:lang="en">Physical state (solid, liquid, gas)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#isMainIngredient">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Product"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#Ingredient"/>
+    <rdfs:label xml:lang="en">isMainIngredient</rdfs:label>
+    <rdfs:comment xml:lang="en">Links product to main ingredients</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#exposureLimitType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#ExposureControl"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">exposureLimitType</rdfs:label>
+    <rdfs:comment xml:lang="en">Type of exposure limit (TWA, STEL, etc.)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#EmergencyContact">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">EmergencyContact</rdfs:label>
+    <rdfs:comment xml:lang="en">Emergency contact information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#PhysicalChemicalProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">PhysicalChemicalProperty</rdfs:label>
+    <rdfs:comment xml:lang="en">Physical or chemical property</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#AccidentalReleaseMeasure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">AccidentalReleaseMeasure</rdfs:label>
+    <rdfs:comment xml:lang="en">Procedure for handling accidental releases</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#chronicToxicity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#ToxicologicalInfo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">chronicToxicity</rdfs:label>
+    <rdfs:comment xml:lang="en">Chronic toxicity information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#exposureLimitUnit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#ExposureControl"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">exposureLimitUnit</rdfs:label>
+    <rdfs:comment xml:lang="en">Unit for exposure limit</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#productType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Product"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">productType</rdfs:label>
+    <rdfs:comment xml:lang="en">Type or category of product</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#disposalMethod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#DisposalMethod"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">disposalMethod</rdfs:label>
+    <rdfs:comment xml:lang="en">Disposal method description</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#hasStorageCondition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Handling_and_Storage"/>
+    <rdfs:range rdf:resource="http://sap.com/kge/msds#StorageCondition"/>
+    <rdfs:label xml:lang="en">hasStorageCondition</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to storage requirements</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#preparationDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#OtherInfo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label xml:lang="en">preparationDate</rdfs:label>
+    <rdfs:comment xml:lang="en">Preparation date</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#EcologicalInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">EcologicalInfo</rdfs:label>
+    <rdfs:comment xml:lang="en">Ecological impact information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#ingredientName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Ingredient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">ingredientName</rdfs:label>
+    <rdfs:comment xml:lang="en">Name of the ingredient</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sap.com/kge/msds#emergencyPhone">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://sap.com/kge/msds#Company"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">emergencyPhone</rdfs:label>
+    <rdfs:comment xml:lang="en">Emergency contact phone</rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>
