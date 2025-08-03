@@ -14,7 +14,6 @@
                                          dcterms:description "Comprehensive ontology for Material Safety Data Sheet documents"@en ;
                                          dcterms:title "SAP KGE MSDS Ontology"@en ;
                                          owl:versionInfo "2.0" .
-
 #################################################################
 #    Annotation properties
 #################################################################
@@ -41,7 +40,6 @@ dcterms:title rdf:type owl:AnnotationProperty .
 
 ###  http://www.w3.org/2001/XMLSchema#date
 xsd:date rdf:type rdfs:Datatype .
-
 
 #################################################################
 #    Object Properties

@@ -1,9 +1,0 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix msds: <http://sap.com/kge/msds#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-msds:document_8e7d9e65-61dc-4eb1-861e-25da9b90c901 a msds:MSDS_Document ;
-    dcterms:created "2025-07-30T18:41:12.884090"^^xsd:dateTime ;
-    dcterms:title "MSDS Document - wd-40" ;
-    msds:documentId "8e7d9e65-61dc-4eb1-861e-25da9b90c901" .
-
